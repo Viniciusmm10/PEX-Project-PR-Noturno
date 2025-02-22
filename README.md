@@ -9,7 +9,14 @@ Integrantes do grupo:
 Vinicius Miguel Mariano da Silva
 
 
+*Resumo do fluxo de trabalho*
 
+git checkout -b nome-da-feature = Nova branch.
+git add . = Adicionar mudanças.
+git commit -m "Descrição" = Commitar mudanças.
+git pull origin main = Atualizar com o código principal.
+git push origin nome-da-feature = Enviar para o GitHub.
+Abrir Pull Request
 
 *GUIA PARA TRABALHAR COM GIT*
 
