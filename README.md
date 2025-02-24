@@ -6,8 +6,12 @@ Integrantes do grupo:
 
 *Coloquem o nome de vocês em ordem alfabética*
 
+Diego Costa de Carvalho
+Jonatan
+Julio
+Samuel Fernandes de Souza Magalhães
 Vinicius Miguel Mariano da Silva
-
+Vitor Vinicius Alves
 
 *Resumo do fluxo de trabalho*
 
