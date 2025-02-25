@@ -7,11 +7,11 @@ Integrantes do grupo:
 *Coloquem o nome de vocês em ordem alfabética*
 
 Diego Costa de Carvalho
-Jonatan
-Julio
-Samuel Fernandes de Souza Magalhães
+RA: 1110567212 - Jonatas Ferreira da Silva Rocha 
+RA: 251004653 - Julio Antonio Bento Junior
+RA: 251004458 - Samuel Fernandes de Souza Magalhães
 Vinicius Miguel Mariano da Silva
-Vitor Vinicius Alves
+RA: 251004519 - Vitor Vinicius Alves
 
 *Resumo do fluxo de trabalho*
 
