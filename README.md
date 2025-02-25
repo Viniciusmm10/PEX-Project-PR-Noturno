@@ -10,7 +10,7 @@ Diego Costa de Carvalho
 Jonatan
 Julio
 Samuel Fernandes de Souza Magalhães
-Vinicius Miguel Mariano da Silva
+Vinicius Miguel Mariano da Silva - RA: 251004514
 Vitor Vinicius Alves
 
 *Resumo do fluxo de trabalho*
