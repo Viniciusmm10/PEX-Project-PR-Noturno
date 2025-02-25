@@ -6,7 +6,7 @@ Integrantes do grupo:
 
 *Coloquem o nome de vocês em ordem alfabética*
 
-Diego Costa de Carvalho
+RA: 251004001 - Diego Costa de Carvalho
 RA: 1110567212 - Jonatas Ferreira da Silva Rocha 
 RA: 251004653 - Julio Antonio Bento Junior
 RA: 251004458 - Samuel Fernandes de Souza Magalhães
