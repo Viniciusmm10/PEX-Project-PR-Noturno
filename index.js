@@ -42,17 +42,14 @@ function getAnswers(answers){
 //Rotas
 
 app.get("/", (req, res) => {
-
-getQuestions((q) => {
-    getAnswers((a) => {
-        res.render("index", {
-            questions: q,
-            answers: a
+    getQuestions((q) => {
+        getAnswers((a) => {
+            res.render("index", {
+                questions: q,
+                answers: a
+            });
         });
-    })
-})
-
-
+    });
 });
 
 
