@@ -1,0 +1,11 @@
+{
+  "name": "projeto_pex",
+  "version": "1.0.0",
+  "description": "Um quiz com perguntas voltadas ao meio corporativo sobre Gestão de Riscos e Continuidade de Negócios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Samuel Fernandes, Diego Costa de Carvalho, Jonatas Ferreira da Silva Rocha, Julio Antonio Bento Junior, Vinicius Miguel Mariano da Silva, Vitor Vinicius Alves",
+  "license": "ISC"
+}
