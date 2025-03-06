@@ -2,7 +2,26 @@
 <body>
     <%- include('partials/navbar.ejs'); %>
     <div class="container">
-        <h1>Página inicial</h1>
+        <h1>Quiz - Projeto PEX 1° Semestre</h1>
+
+        <% questions.forEach(question => { %>
+
+            <hr>
+            <p><%= question.question_name %></p>
+            
+            <% let answer = answers.filter(a => a.question_id == question.id)%>
+
+            <% answer.forEach(a => { %> 
+                <div>
+                    <input type="radio" value=""><label><%= a.answer %></label>
+                </div>
+            <% }) %>
+            
+            
+        <% }) %>
+
+        <!-- <% console.log(questions, answers) %> -->
+
     </div>
 </body>
 <%- include('partials/footer.ejs'); %>
