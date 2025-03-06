@@ -2,8 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
-const Pergunta = require("./database/Pergunta");
-const Resposta = require("./database/Resposta");
+// const Pergunta = require("./database/Pergunta");
+// const Resposta = require("./database/Resposta");
 //Database
 
 connection
@@ -89,6 +89,6 @@ app.post("/responder", (req, res) => {
     });
 });
 
-app.listen(8080, () => {console.log("App rodando!");});
+app.listen(80, () => {console.log("App rodando!");});
 
 
