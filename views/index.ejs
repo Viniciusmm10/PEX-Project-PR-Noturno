@@ -2,26 +2,42 @@
 <body>
     <%- include('partials/navbar.ejs'); %>
     <div class="container">
-        <h1>Quiz - Projeto PEX 1° Semestre</h1>
-
-        <% questions.forEach(question => { %>
-
-            <hr>
-            <p><%= question.question_name %></p>
-            
-            <% let answer = answers.filter(a => a.question_id == question.id)%>
-
-            <% answer.forEach(a => { %> 
-                <div>
-                    <input type="radio" value=""><label><%= a.answer %></label>
-                </div>
-            <% }) %>
-            
-            
-        <% }) %>
-
         
+        <h1>Quiz - Gestão de Riscos e Continuidade de Negócios</h1>
 
+        <form method="POST" action="">
+
+            <% 
+                let count1 = 1;
+                let count2 = 1;
+                questions.forEach(question => { 
+            %>
+                <div class="card form-question">
+                    <div class="card-header">
+                        <h3><%= question.question_name %></h3>
+                    </div>
+
+                    <% 
+                        let answer = answers.filter(a => a.question_id == question.id)
+                    %>
+                    
+                    <div class="card body">
+                        
+                    <% answer.forEach(a => { %> 
+                        <div class="form-check options">
+                            <input class="form-check-input" type="radio" name="opcao_pergunta_<%= count1 %>" id="resposta_<%= count2 %>">
+                            <label class="form-check-label" for="resposta_<%= count2 %>"><%= a.answer %></label>
+                        </div>
+                    <% 
+                        count2++
+                    }) %>
+
+                    </div>
+                </div>
+            <% 
+                count1++
+            }) %>
+            <button type="button" class="btn btn-primary form-question">Enviar respostas</button>
+        </form>
     </div>
-</body>
 <%- include('partials/footer.ejs'); %>
