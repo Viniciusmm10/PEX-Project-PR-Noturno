@@ -6,52 +6,50 @@ const Quiz = {
     Perguntas_Aleatorias
 }
 
-function Perguntas(){
+async function Perguntas(){
 
-return new Promise((res, rej) => {
-    connection
-        .query(`SELECT
-                    p.idpergunta,
-                    p.pergunta
-                FROM quiz.perguntas AS p;`, { raw: true })
-        .then(results => {
-            res(results[0])
-        })
-        .catch(results => {
-            rej(results)
-        })
-    })
+const result = await connection.query(
+    `SELECT
+        p.idpergunta,
+        p.pergunta
+    FROM quiz.perguntas AS p;`, 
+    { raw: true }
+)
+
+return result[0]
+
 }
     
-function Alternativas(){
+async function Alternativas(){
 
-return new Promise((res, rej) => {
-    connection
-        .query(`SELECT 
-                    a.pergunta_idpergunta, 
-                    a.alternativa 
-                FROM quiz.alternativas AS a;`, { raw: true })
-        .then(results => {
-            res(results[0])
-        })
-        .catch(results => {
-            rej(results)
-        })
-    })
+const result = await connection.query(
+    `SELECT 
+        a.pergunta_idpergunta, 
+        a.alternativa 
+    FROM quiz.alternativas AS a;`, 
+    { raw: true }
+)
+
+return result[0]
+
 }
 
 
 async function Perguntas_Aleatorias(min, max, qtd){
-    const perguntas = await Perguntas();
-    let perguntas_embaralhadas = [];
 
-    idsAleatorios(min, max, qtd).forEach(id => {
-      perguntas_embaralhadas.push(perguntas.find(p => p.idpergunta == id))
-    })
+const perguntas = await Perguntas();
 
-    return new Promise((res, rej) => {
-        res(perguntas_embaralhadas)
-    })
+// let perguntas_embaralhadas = [];
+
+// idsAleatorios(min, max, qtd).forEach(id => {
+//     perguntas_embaralhadas.push(perguntas.find(p => p.idpergunta == id))
+// })
+
+let filtro = idsAleatorios(min, max, qtd);
+let result = perguntas.filter(o => filtro.has(o.idpergunta));
+
+return Promise.resolve(result)
+
 }
 
 

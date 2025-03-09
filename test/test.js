@@ -2,19 +2,21 @@
 const Quiz = require("../engine/quiz")
 
 
-async function teste(){
-    const perguntas = await Quiz.Perguntas();
-    console.log(perguntas);
-}
-
-//teste()
-
 function aleatorioEntre(min, max){
   let numeroAleatorio = Math.floor(Math.random() * (max - min + 1)) + min;
   return numeroAleatorio;
 }
 
-//console.log(aleatorioEntre(1, 50));
+function idsAleatorios(min, max, qtd){
+  let ids = new Set();
+  do
+  {
+    ids.add(aleatorioEntre(min, max))
+  } 
+  while (ids.size !== qtd)
+
+  return ids;
+}
 
 
 let perguntas = [
@@ -31,17 +33,10 @@ let perguntas = [
 ]
 
 
+let filtro = idsAleatorios(1, 10, 3)
+let result = perguntas.filter(o => filtro.has(o.idpergunta))
 
-function idsAleatorios(min, max, qtd){
-  let ids = new Set();
-  do
-  {
-    ids.add(aleatorioEntre(min, max))
-  } 
-  while (ids.size !== qtd)
-
-  return ids;
-}
+console.log(filtro, "\n", result)
 
 
 let perguntas_embaralhadas = [];
@@ -50,7 +45,6 @@ idsAleatorios(1,10,3).forEach(id => {
   perguntas_embaralhadas.push(perguntas.find(p => p.idpergunta == id))
 })
 
-console.log(perguntas_embaralhadas)
 
 
 
