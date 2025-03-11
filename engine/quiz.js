@@ -1,9 +1,11 @@
+const Sequelize = require("sequelize");
 const connection = require("../database/database");
 
 const Quiz = {
     Perguntas,
     Alternativas,
-    Perguntas_Aleatorias
+    Perguntas_Aleatorias,
+    ResponderPergunta
 }
 
 async function Perguntas(){
@@ -34,16 +36,9 @@ return result[0]
 
 }
 
-
 async function Perguntas_Aleatorias(min, max, qtd){
 
 const perguntas = await Perguntas();
-
-// let perguntas_embaralhadas = [];
-
-// idsAleatorios(min, max, qtd).forEach(id => {
-//     perguntas_embaralhadas.push(perguntas.find(p => p.idpergunta == id))
-// })
 
 let filtro = idsAleatorios(min, max, qtd);
 let result = perguntas.filter(o => filtro.has(o.idpergunta));
@@ -51,6 +46,40 @@ let result = perguntas.filter(o => filtro.has(o.idpergunta));
 return Promise.resolve(result)
 
 }
+
+async function ResponderPergunta(idusuario, idpergunta, idalternativa){
+
+try{
+    await connection.query(`
+        INSERT INTO respostas_usuarios(
+            usuarios_idusuario,
+            pergunta_idpergunta,
+            alternativas_idalternativas,
+        datahora_resposta)
+        VALUES (
+            :idusuario,
+            :idpergunta,
+            :idalternativa,
+            :datahoraresposta
+        )`, 
+    {
+        replacements: {
+            idusuario: idusuario,
+            idpergunta: idpergunta,
+            idalternativa: idalternativa,
+            datahoraresposta: new Date()
+        },
+        type: Sequelize.QueryTypes.INSERT,
+    });
+} catch(e){
+    return Promise.resolve(false)
+}
+
+return Promise.resolve(true)
+
+}
+
+
 
 
 // Funções auxiliares
