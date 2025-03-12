@@ -45,14 +45,17 @@ const Quiz = require("../engine/quiz")
 //   perguntas_embaralhadas.push(perguntas.find(p => p.idpergunta == id))
 // })
 
-async function teste3(){
-  const r = await Quiz.ResponderPergunta(1, 2, 1)
+// async function teste3(){
+//   const r = await Quiz.ResponderPergunta(1, 2, 1)
  
-  console.log(r)
+//   console.log(r)
 
-}
+// }
 
-teste3()
+// teste3()
+
+
+Quiz.test()
 
 
 

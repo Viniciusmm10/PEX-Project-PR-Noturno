@@ -5,7 +5,9 @@ const Quiz = {
     Perguntas,
     Alternativas,
     Perguntas_Aleatorias,
-    ResponderPergunta
+    Alternativas_Aleatorias,
+    ResponderPergunta,
+    test
 }
 
 async function Perguntas(){
@@ -46,6 +48,30 @@ let result = perguntas.filter(o => filtro.has(o.idpergunta));
 return Promise.resolve(result)
 
 }
+
+async function Alternativas_Aleatorias() {
+// let alternativas = []
+// alternativas =  [... await Alternativas()];
+const alternativas =  await Alternativas();
+
+let filtro = idsAleatorios(1 , alternativas.length, alternativas.length);
+// let result = alternativas.filter(o => filtro.has(o.pergunta_idpergunta));
+
+let result = [];
+filtro.forEach(id => {
+    result.push(alternativas.find(o => o.pergunta_idpergunta == id))
+})
+
+return Promise.resolve(result)
+    
+}
+
+async function test() {
+    const result = await Alternativas_Aleatorias();
+    console.log(result);
+}
+
+
 
 async function ResponderPergunta(idusuario, idpergunta, idalternativa){
 
@@ -99,9 +125,6 @@ function idsAleatorios(min, max, qtd){
   
     return ids;
 }
-
-
-
 
 
 module.exports = Quiz
