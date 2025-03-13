@@ -1,0 +1,133 @@
+1.	O que é gestão de riscos em TI?
+a) Um processo para eliminar todos os riscos em TI
+b) Um conjunto de práticas para identificar, avaliar e mitigar riscos em TI (✔)
+c) Um método para aumentar a performance dos sistemas
+d) Uma estratégia para evitar gastos com segurança
+	2.	Qual é o principal objetivo da gestão de riscos?
+a) Eliminar completamente todos os riscos
+b) Reduzir e controlar os impactos negativos dos riscos (✔)
+c) Garantir que os ataques cibernéticos nunca ocorram
+d) Maximizar a produtividade da equipe de TI
+	3.	Qual a primeira etapa no processo de gestão de riscos?
+a) Implementação de medidas de segurança
+b) Monitoramento contínuo
+c) Identificação dos riscos (✔)
+d) Definição de um plano de resposta a incidentes
+	4.	O que é um ativo de TI?
+a) Qualquer elemento que possa ser considerado um recurso valioso para a organização (✔)
+b) Apenas computadores e servidores
+c) Apenas dados confidenciais
+d) Somente hardware utilizado pela equipe de TI
+	5.	Qual das opções não é um risco comum em TI?
+a) Ataques cibernéticos
+b) Falhas de hardware
+c) Mudança de logotipo da empresa (✔)
+d) Erros humanos
+
+Identificação e Avaliação de Riscos
+	6.	O que é uma matriz de risco?
+a) Um gráfico que analisa a probabilidade e o impacto dos riscos (✔)
+b) Uma lista de ameaças cibernéticas
+c) Um sistema de backup automático
+d) Um método de autenticação de usuários
+	7.	Como é calculado o nível de risco?
+a) Multiplicando impacto pelo custo financeiro
+b) Multiplicando probabilidade pelo impacto (✔)
+c) Somando todas as ameaças conhecidas
+d) Considerando apenas os ataques cibernéticos recentes
+	8.	O que é um risco residual?
+a) Um risco que já foi completamente eliminado
+b) O risco que permanece após a aplicação de medidas de mitigação (✔)
+c) Um risco insignificante e irrelevante para a empresa
+d) O risco que não pode ser identificado
+	9.	O que são indicadores-chave de risco (KRI)?
+a) Alertas automáticos de ameaças
+b) Métricas que ajudam a medir a exposição da organização a riscos (✔)
+c) Tecnologias usadas para prevenir ataques
+d) Normas de conformidade regulatória
+	10.	O que significa um risco ser aceitável?
+a) Que ele pode ser ignorado sem impacto
+b) Que os custos de mitigação são mais altos que os danos potenciais (✔)
+c) Que ele não precisa ser monitorado
+d) Que ele já foi tratado completamente
+
+Mitigação e Respostas aos Riscos
+	11.	Qual destas NÃO é uma estratégia de tratamento de riscos?
+a) Aceitação
+b) Mitigação
+c) Intensificação (✔)
+d) Transferência
+	12.	Como os firewalls ajudam na gestão de riscos?
+a) Protegem contra acessos não autorizados (✔)
+b) Fazem backup de dados automaticamente
+c) Eliminam a necessidade de antivírus
+d) Criam senhas seguras para os usuários
+	13.	Qual a importância do backup na gestão de riscos?
+a) Permite a recuperação de dados em caso de falhas (✔)
+b) Elimina completamente os ataques de ransomware
+c) Substitui o uso de firewalls
+d) Dispensa a necessidade de criptografia
+	14.	O que significa transferência de risco?
+a) Transferir a responsabilidade do risco para um terceiro, como um seguro (✔)
+b) Eliminar completamente o risco
+c) Aceitar o risco sem tomar medidas adicionais
+d) Criar uma nova política de segurança
+	15.	O que é um plano de resposta a incidentes?
+a) Um conjunto de ações para lidar com incidentes de segurança (✔)
+b) Uma lista de regras de conformidade
+c) Um sistema automatizado de segurança
+d) Uma política de acesso de usuários
+
+Segurança da Informação e Compliance
+	16.	Como a LGPD impacta a gestão de riscos?
+a) Impõe regras sobre a proteção de dados pessoais (✔)
+b) Substitui a necessidade de firewalls
+c) Garante que todas as empresas estejam 100% seguras
+d) Dispensa a necessidade de criptografia
+	17.	O que é um ataque de phishing?
+a) Um ataque baseado em engenharia social para roubar informações (✔)
+b) Um tipo de malware que criptografa arquivos
+c) Um ataque físico contra servidores
+d) Um método de backup
+	18.	Qual dessas é uma medida de proteção contra ransomware?
+a) Utilizar backups frequentes (✔)
+b) Compartilhar senhas entre usuários
+c) Permitir downloads de fontes desconhecidas
+d) Desativar o antivírus
+	19.	Qual o papel da autenticação multifator (MFA)?
+a) Reduzir o risco de acessos não autorizados (✔)
+b) Substituir a necessidade de senhas
+c) Aumentar a complexidade do login sem benefícios reais
+d) Criar backups automáticos
+	20.	O que significa um ataque zero-day?
+a) Uma vulnerabilidade explorada antes que um patch seja disponibilizado (✔)
+b) Um ataque físico contra centros de dados
+c) Um erro causado por falha de hardware
+d) Um vírus que se espalha apenas por e-mail
+
+Tendências e Tecnologias na Gestão de Riscos
+	21.	O que é a abordagem Zero Trust?
+a) Uma estratégia que assume que nenhuma entidade é confiável por padrão (✔)
+b) Um modelo que elimina totalmente os riscos
+c) Um tipo de firewall avançado
+d) Um software de backup
+	22.	Como a computação em nuvem influencia a gestão de riscos?
+a) Pode aumentar a segurança, mas exige boas práticas de controle (✔)
+b) Elimina a necessidade de gestão de riscos
+c) Torna os dados inacessíveis para hackers
+d) Dispensa a necessidade de autenticação multifator
+	23.	O que é DevSecOps?
+a) Uma abordagem que integra segurança no desenvolvimento de software (✔)
+b) Um novo modelo de firewall
+c) Uma metodologia para testar redes sem fio
+d) Um sistema de backup automatizado
+	24.	Como a inteligência artificial pode ajudar na gestão de riscos?
+a) Identificando ameaças em tempo real (✔)
+b) Criando senhas para usuários
+c) Eliminando completamente ataques de hackers
+d) Reduzindo a necessidade de monitoramento humano
+	25.	O que são frameworks de gestão de riscos?
+a) Conjuntos de diretrizes para lidar com riscos (✔)
+b) Programas de firewall
+c) Softwares de backup
+d) Políticas de acesso a internet

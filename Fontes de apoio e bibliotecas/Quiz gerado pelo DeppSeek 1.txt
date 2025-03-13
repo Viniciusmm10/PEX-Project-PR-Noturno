@@ -1,0 +1,82 @@
+Quiz sobre Gestão de Riscos
+1. O que é Gestão de Riscos?
+a) Um processo para eliminar todos os riscos de um projeto.
+b) Um processo de identificação, análise, planejamento e controle de riscos para minimizar impactos negativos.
+c) Uma técnica para transferir todos os riscos para terceiros.
+d) Um método para ignorar riscos e focar apenas nos resultados.
+
+Resposta correta: b) Um processo de identificação, análise, planejamento e controle de riscos para minimizar impactos negativos.
+
+2. Qual é o primeiro passo no processo de Gestão de Riscos?
+a) Análise qualitativa dos riscos.
+b) Identificação dos riscos.
+c) Planejamento de respostas aos riscos.
+d) Monitoramento e controle dos riscos.
+
+Resposta correta: b) Identificação dos riscos.
+
+3. O que é uma Matriz de Probabilidade e Impacto?
+a) Uma ferramenta para calcular custos de projetos.
+b) Um gráfico que classifica riscos com base na probabilidade de ocorrência e no impacto que podem causar.
+c) Um método para transferir riscos para seguradoras.
+d) Uma técnica para eliminar riscos irrelevantes.
+
+Resposta correta: b) Um gráfico que classifica riscos com base na probabilidade de ocorrência e no impacto que podem causar.
+
+4. Qual das seguintes opções NÃO é uma estratégia comum para tratar riscos?
+a) Mitigação.
+b) Transferência.
+c) Eliminação completa de todos os riscos.
+d) Aceitação.
+
+Resposta correta: c) Eliminação completa de todos os riscos.
+
+5. O que é um "risco residual"?
+a) Um risco que foi completamente eliminado.
+b) Um risco que permanece após a implementação de ações de mitigação.
+c) Um risco que foi transferido para terceiros.
+d) Um risco que não foi identificado durante o processo de análise.
+
+Resposta correta: b) Um risco que permanece após a implementação de ações de mitigação.
+
+6. Qual é o objetivo principal da Gestão de Riscos?
+a) Garantir que todos os riscos sejam eliminados.
+b) Maximizar os impactos negativos dos riscos.
+c) Reduzir a incerteza e proteger os objetivos do projeto ou organização.
+d) Ignorar riscos e focar apenas nas oportunidades.
+
+Resposta correta: c) Reduzir a incerteza e proteger os objetivos do projeto ou organização.
+
+7. O que é uma "oportunidade" no contexto de Gestão de Riscos?
+a) Um evento negativo que deve ser evitado.
+b) Um evento positivo que pode trazer benefícios para o projeto ou organização.
+c) Um risco que não pode ser mitigado.
+d) Um risco residual.
+
+Resposta correta: b) Um evento positivo que pode trazer benefícios para o projeto ou organização.
+
+8. Qual das seguintes ferramentas é comumente usada para identificar riscos?
+a) Análise SWOT.
+b) Gráfico de Gantt.
+c) Diagrama de Pareto.
+d) Curva S.
+
+Resposta correta: a) Análise SWOT.
+
+9. O que é um "Plano de Resposta a Riscos"?
+a) Um documento que descreve como os riscos serão identificados.
+b) Um plano que detalha as ações a serem tomadas caso um risco ocorra.
+c) Um relatório que ignora os riscos identificados.
+d) Uma técnica para calcular o custo total do projeto.
+
+Resposta correta: b) Um plano que detalha as ações a serem tomadas caso um risco ocorra.
+
+10. Qual é a importância do monitoramento contínuo na Gestão de Riscos?
+a) Para garantir que todos os riscos sejam eliminados permanentemente.
+b) Para identificar novos riscos e avaliar a eficácia das respostas aos riscos existentes.
+c) Para transferir todos os riscos para terceiros.
+d) Para ignorar riscos e focar apenas no sucesso do projeto.
+
+Resposta correta: b) Para identificar novos riscos e avaliar a eficácia das respostas aos riscos existentes.
+
+

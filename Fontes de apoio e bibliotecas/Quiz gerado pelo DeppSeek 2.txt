@@ -1,0 +1,73 @@
+Nível Fácil
+O que é Gestão de Riscos?
+a) Um processo para eliminar todos os riscos de um projeto.
+b) Um processo de identificação, análise e resposta a riscos.
+c) Uma técnica para aumentar os riscos em um projeto.
+d) Um método para ignorar riscos e focar apenas nos resultados.
+Resposta correta: b) Um processo de identificação, análise e resposta a riscos.
+
+Qual é o primeiro passo no processo de Gestão de Riscos?
+a) Análise de riscos.
+b) Identificação de riscos.
+c) Planejamento de respostas a riscos.
+d) Monitoramento de riscos.
+Resposta correta: b) Identificação de riscos.
+
+Nível Médio
+Qual das seguintes técnicas é comumente usada para identificar riscos?
+a) Análise SWOT.
+b) Cronograma de Gantt.
+c) Método da Cadeia Crítica.
+d) Diagrama de Pareto.
+Resposta correta: a) Análise SWOT.
+
+O que é uma Matriz de Probabilidade e Impacto?
+a) Uma ferramenta para priorizar riscos com base na probabilidade e no impacto.
+b) Um gráfico para medir o desempenho do projeto.
+c) Uma técnica para calcular o custo total do projeto.
+d) Um método para eliminar riscos de baixa probabilidade.
+Resposta correta: a) Uma ferramenta para priorizar riscos com base na probabilidade e no impacto.
+
+Qual das seguintes é uma estratégia de resposta a riscos?
+a) Transferência.
+b) Ignorar.
+c) Aumentar o risco.
+d) Eliminar todos os riscos.
+Resposta correta: a) Transferência.
+
+Nível Difícil
+O que é o conceito de "apetite ao risco" em Gestão de Riscos?
+a) A quantidade de risco que uma organização está disposta a aceitar.
+b) A quantidade de risco que deve ser eliminada imediatamente.
+c) A quantidade de risco que não pode ser medida.
+d) A quantidade de risco que é irrelevante para o projeto.
+Resposta correta: a) A quantidade de risco que uma organização está disposta a aceitar.
+
+Qual é a diferença entre risco positivo e risco negativo?
+a) Risco positivo traz oportunidades, enquanto risco negativo traz ameaças.
+b) Risco positivo é sempre aceitável, enquanto risco negativo não é.
+c) Risco positivo é ignorado, enquanto risco negativo é priorizado.
+d) Não há diferença entre os dois.
+Resposta correta: a) Risco positivo traz oportunidades, enquanto risco negativo traz ameaças.
+
+O que é um Plano de Contingência?
+a) Um plano para evitar todos os riscos.
+b) Um plano que define ações a serem tomadas se um risco específico ocorrer.
+c) Um plano para aumentar os riscos do projeto.
+d) Um plano que ignora os riscos identificados.
+Resposta correta: b) Um plano que define ações a serem tomadas se um risco específico ocorrer.
+
+Bônus (Nível Avançado)
+Qual é o papel do "Risk Owner" (Dono do Risco) em um projeto?
+a) Ignorar os riscos identificados.
+b) Monitorar e gerenciar um risco específico atribuído a ele.
+c) Eliminar todos os riscos do projeto.
+d) Aumentar a probabilidade de riscos negativos.
+Resposta correta: b) Monitorar e gerenciar um risco específico atribuído a ele.
+
+Qual norma internacional é amplamente utilizada para Gestão de Riscos?
+a) ISO 9001.
+b) ISO 31000.
+c) ISO 14001.
+d) ISO 27001.
+Resposta correta: b) ISO 31000.

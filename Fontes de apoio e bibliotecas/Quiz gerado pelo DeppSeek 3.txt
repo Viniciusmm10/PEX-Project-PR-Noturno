@@ -1,0 +1,183 @@
+Nível Fácil
+O que é Gestão de Riscos?
+a) Um processo para eliminar todos os riscos de um projeto.
+b) Um processo de identificação, análise e resposta a riscos.
+c) Um método para aumentar os riscos em uma organização.
+Resposta correta: b) Um processo de identificação, análise e resposta a riscos.
+
+Qual é o primeiro passo no processo de Gestão de Riscos?
+a) Análise de riscos.
+b) Identificação de riscos.
+c) Planejamento de respostas.
+Resposta correta: b) Identificação de riscos.
+
+O que é um risco positivo?
+a) Um risco que não afeta o projeto.
+b) Um risco que pode trazer benefícios ou oportunidades.
+c) Um risco que sempre causa prejuízos.
+Resposta correta: b) Um risco que pode trazer benefícios ou oportunidades.
+
+Qual é o objetivo principal da Gestão de Riscos?
+a) Eliminar todos os riscos.
+b) Minimizar o impacto de riscos negativos e maximizar oportunidades.
+c) Ignorar riscos menores.
+Resposta correta: b) Minimizar o impacto de riscos negativos e maximizar oportunidades.
+
+O que é uma matriz de probabilidade e impacto?
+a) Uma ferramenta para priorizar riscos.
+b) Um método para calcular custos.
+c) Um gráfico para medir o tempo do projeto.
+Resposta correta: a) Uma ferramenta para priorizar riscos.
+
+O que é um plano de contingência?
+a) Um plano para evitar riscos.
+b) Um plano de ação para riscos que já ocorreram.
+c) Um plano de ação para riscos identificados que podem ocorrer.
+Resposta correta: c) Um plano de ação para riscos identificados que podem ocorrer.
+
+Qual é a diferença entre risco e problema?
+a) Risco é algo que pode acontecer; problema é algo que já aconteceu.
+b) Risco é sempre negativo; problema pode ser positivo.
+c) Não há diferença.
+Resposta correta: a) Risco é algo que pode acontecer; problema é algo que já aconteceu.
+
+O que é mitigação de riscos?
+a) Eliminar completamente o risco.
+b) Reduzir a probabilidade ou impacto de um risco.
+c) Ignorar o risco.
+Resposta correta: b) Reduzir a probabilidade ou impacto de um risco.
+
+Qual é a importância da comunicação na Gestão de Riscos?
+a) Não é importante.
+b) Ajuda a garantir que todas as partes interessadas estejam cientes dos riscos.
+c) Aumenta os riscos.
+Resposta correta: b) Ajuda a garantir que todas as partes interessadas estejam cientes dos riscos.
+
+O que é um registro de riscos?
+a) Um documento que lista todos os riscos identificados.
+b) Um relatório financeiro.
+c) Um gráfico de Gantt.
+Resposta correta: a) Um documento que lista todos os riscos identificados.
+
+Nível Médio
+O que é análise qualitativa de riscos?
+a) Uma análise baseada em dados numéricos.
+b) Uma análise subjetiva que prioriza riscos com base em probabilidade e impacto.
+c) Uma análise que ignora riscos menores.
+Resposta correta: b) Uma análise subjetiva que prioriza riscos com base em probabilidade e impacto.
+
+O que é análise quantitativa de riscos?
+a) Uma análise baseada em dados numéricos e estatísticos.
+b) Uma análise subjetiva.
+c) Uma análise que não considera o impacto financeiro.
+Resposta correta: a) Uma análise baseada em dados numéricos e estatísticos.
+
+O que é um risco residual?
+a) Um risco que foi completamente eliminado.
+b) Um risco que permanece após a implementação de respostas.
+c) Um risco que não foi identificado.
+Resposta correta: b) Um risco que permanece após a implementação de respostas.
+
+O que é transferência de risco?
+a) Eliminar o risco.
+b) Transferir o risco para uma terceira parte, como um seguro.
+c) Ignorar o risco.
+Resposta correta: b) Transferir o risco para uma terceira parte, como um seguro.
+
+O que é aceitação de risco?
+a) Decidir não agir sobre um risco.
+b) Eliminar o risco completamente.
+c) Transferir o risco para outra equipe.
+Resposta correta: a) Decidir não agir sobre um risco.
+
+O que é um gatilho de risco?
+a) Um evento que indica que um risco pode estar prestes a ocorrer.
+b) Um documento que descreve o risco.
+c) Uma pessoa responsável pelo risco.
+Resposta correta: a) Um evento que indica que um risco pode estar prestes a ocorrer.
+
+O que é um risco inerente?
+a) Um risco que existe antes de qualquer ação de mitigação.
+b) Um risco que foi completamente eliminado.
+c) Um risco que só ocorre em projetos grandes.
+Resposta correta: a) Um risco que existe antes de qualquer ação de mitigação.
+
+O que é um risco secundário?
+a) Um risco que surge como resultado de uma resposta a outro risco.
+b) Um risco que não tem impacto no projeto.
+c) Um risco que é sempre positivo.
+Resposta correta: a) Um risco que surge como resultado de uma resposta a outro risco.
+
+O que é um risco estratégico?
+a) Um risco relacionado à estratégia de negócios de uma organização.
+b) Um risco operacional.
+c) Um risco financeiro.
+Resposta correta: a) Um risco relacionado à estratégia de negócios de uma organização.
+
+O que é um risco operacional?
+a) Um risco relacionado às operações diárias de uma organização.
+b) Um risco financeiro.
+c) Um risco estratégico.
+Resposta correta: a) Um risco relacionado às operações diárias de uma organização.
+
+Nível Difícil
+O que é Value at Risk (VaR)?
+a) Uma medida estatística usada para quantificar o nível de risco financeiro.
+b) Um método para identificar riscos.
+c) Uma ferramenta de análise qualitativa.
+Resposta correta: a) Uma medida estatística usada para quantificar o nível de risco financeiro.
+
+O que é análise de cenários na Gestão de Riscos?
+a) Uma técnica que avalia o impacto de diferentes cenários hipotéticos.
+b) Uma análise que ignora cenários futuros.
+c) Um método para calcular custos.
+Resposta correta: a) Uma técnica que avalia o impacto de diferentes cenários hipotéticos.
+
+O que é Monte Carlo Simulation na Gestão de Riscos?
+a) Uma técnica de simulação que usa probabilidades para prever resultados.
+b) Um método para identificar riscos.
+c) Uma ferramenta de análise qualitativa.
+Resposta correta: a) Uma técnica de simulação que usa probabilidades para prever resultados.
+
+O que é Risk Appetite?
+a) A quantidade de risco que uma organização está disposta a aceitar.
+b) A eliminação completa de riscos.
+c) A transferência de todos os riscos para terceiros.
+Resposta correta: a) A quantidade de risco que uma organização está disposta a aceitar.
+
+O que é Risk Tolerance?
+a) O nível de variação que uma organização está disposta a aceitar em relação aos seus objetivos.
+b) A eliminação de todos os riscos.
+c) A transferência de riscos para terceiros.
+Resposta correta: a) O nível de variação que uma organização está disposta a aceitar em relação aos seus objetivos.
+
+O que é Risk Threshold?
+a) O nível específico de risco que uma organização não pode ultrapassar.
+b) A quantidade de risco que uma organização está disposta a aceitar.
+c) A eliminação de todos os riscos.
+Resposta correta: a) O nível específico de risco que uma organização não pode ultrapassar.
+
+O que é um Risk Owner?
+a) A pessoa responsável por monitorar e gerenciar um risco específico.
+b) A pessoa que cria os riscos.
+c) A pessoa que ignora os riscos.
+Resposta correta: a) A pessoa responsável por monitorar e gerenciar um risco específico.
+
+O que é um Risk Breakdown Structure (RBS)?
+a) Uma hierarquia de riscos categorizados por fonte.
+b) Um documento que descreve o plano de respostas.
+c) Uma ferramenta de análise quantitativa.
+Resposta correta: a) Uma hierarquia de riscos categorizados por fonte.
+
+O que é um Risk Audit?
+a) Uma revisão sistemática dos processos de Gestão de Riscos.
+b) Um método para aumentar os riscos.
+c) Uma ferramenta de análise qualitativa.
+Resposta correta: a) Uma revisão sistemática dos processos de Gestão de Riscos.
+
+O que é um Risk Culture?
+a) A forma como uma organização percebe e gerencia os riscos.
+b) A eliminação de todos os riscos.
+c) A transferência de riscos para terceiros.
+Resposta correta: a) A forma como uma organização percebe e gerencia os riscos.
+

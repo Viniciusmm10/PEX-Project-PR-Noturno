@@ -1,0 +1,3 @@
+ - Faça um quiz sobre Gestão de Riscos, destacando a resposta correta e o nível de dificuldade da pergunta entre fácil, médio e difícil, com cerca de 50 perguntas.
+
+ - Faça um quiz sobre Gestão de Continuidade de Negócios, destacando a resposta correta e o nível de dificuldade da pergunta entre fácil, médio e difícil, com cerca de 50 perguntas.

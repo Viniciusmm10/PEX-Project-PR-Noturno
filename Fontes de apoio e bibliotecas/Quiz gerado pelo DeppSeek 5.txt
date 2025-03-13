@@ -1,0 +1,410 @@
+Nível Fácil
+O que significa GCN?
+a) Gestão de Custos Negociados
+b) Gestão de Continuidade de Negócios
+c) Gestão de Contratos Normativos
+d) Gestão de Capital Nacional
+Resposta correta: b)
+Dificuldade: Fácil
+
+Qual é o principal objetivo da Gestão de Continuidade de Negócios?
+a) Reduzir custos operacionais
+b) Garantir a continuidade das operações em caso de interrupções
+c) Aumentar a lucratividade da empresa
+d) Melhorar a satisfação dos clientes
+Resposta correta: b)
+Dificuldade: Fácil
+
+O que é um Plano de Continuidade de Negócios (PCN)?
+a) Um documento que descreve estratégias de marketing
+b) Um documento que detalha como uma organização deve responder a incidentes e continuar operando
+c) Um plano para expandir os negócios internacionalmente
+d) Um relatório financeiro anual
+Resposta correta: b)
+Dificuldade: Fácil
+
+Qual é a primeira fase do ciclo de vida da Gestão de Continuidade de Negócios?
+a) Implementação
+b) Análise de impacto nos negócios (BIA)
+c) Testes e exercícios
+d) Monitoramento e revisão
+Resposta correta: b)
+Dificuldade: Fácil
+
+O que é uma Análise de Impacto nos Negócios (BIA)?
+a) Uma análise de mercado
+b) Um processo que identifica e avalia os impactos de interrupções nas operações
+c) Uma avaliação de desempenho dos funcionários
+d) Um estudo de viabilidade financeira
+Resposta correta: b)
+Dificuldade: Fácil
+
+Qual é o principal benefício de um Plano de Continuidade de Negócios?
+a) Aumentar a competitividade no mercado
+b) Minimizar o tempo de inatividade e os prejuízos em caso de desastres
+c) Reduzir a carga tributária
+d) Melhorar a imagem da empresa
+Resposta correta: b)
+Dificuldade: Fácil
+
+O que é um "ponto de recuperação" (RPO)?
+a) O tempo máximo aceitável para recuperar dados após uma interrupção
+b) O ponto no tempo para o qual os dados devem ser recuperados
+c) O local onde os backups são armazenados
+d) O custo de recuperação de dados
+Resposta correta: b)
+Dificuldade: Fácil
+
+O que é um "tempo de recuperação" (RTO)?
+a) O tempo máximo aceitável para recuperar operações após uma interrupção
+b) O tempo necessário para realizar backups
+c) O tempo de resposta de um fornecedor
+d) O tempo de vida útil de um equipamento
+Resposta correta: a)
+Dificuldade: Fácil
+
+Qual é o papel de um líder de continuidade de negócios?
+a) Gerenciar o departamento financeiro
+b) Coordenar a implementação e manutenção do PCN
+c) Realizar auditorias internas
+d) Desenvolver novos produtos
+Resposta correta: b)
+Dificuldade: Fácil
+
+O que é um "cenário de crise"?
+a) Um plano de marketing de emergência
+b) Uma situação hipotética usada para testar o PCN
+c) Um relatório de desempenho financeiro
+d) Uma análise de mercado
+Resposta correta: b)
+Dificuldade: Fácil
+
+Nível Médio
+Qual norma internacional é amplamente utilizada para Gestão de Continuidade de Negócios?
+a) ISO 9001
+b) ISO 22301
+c) ISO 27001
+d) ISO 14001
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "local de recuperação"?
+a) Um local para armazenar documentos físicos
+b) Um local alternativo para operar em caso de desastre
+c) Um local para treinamento de funcionários
+d) Um local para reuniões de emergência
+Resposta correta: b)
+Dificuldade: Médio
+
+Qual é a diferença entre GCN e Gerenciamento de Riscos?
+a) GCN foca em lucratividade, enquanto Gerenciamento de Riscos foca em perdas
+b) GCN foca em manter operações durante interrupções, enquanto Gerenciamento de Riscos identifica e mitiga riscos
+c) GCN é voltado para TI, enquanto Gerenciamento de Riscos é voltado para finanças
+d) Não há diferença
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "exercício de mesa" (tabletop exercise)?
+a) Um treinamento físico para funcionários
+b) Uma simulação de cenários de crise para testar o PCN
+c) Uma reunião para discutir finanças
+d) Um exercício de ergonomia no local de trabalho
+Resposta correta: b)
+Dificuldade: Médio
+
+Qual é o objetivo de um teste de recuperação de desastres?
+a) Avaliar a produtividade dos funcionários
+b) Verificar a eficácia do PCN em situações reais
+c) Reduzir custos operacionais
+d) Melhorar a comunicação interna
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "plano de comunicação de crise"?
+a) Um plano para melhorar a comunicação interna
+b) Um plano para gerenciar a comunicação durante uma crise
+c) Um plano de marketing de emergência
+d) Um plano de treinamento para funcionários
+Resposta correta: b)
+Dificuldade: Médio
+
+Qual é a importância de revisar e atualizar o PCN regularmente?
+a) Para aumentar o lucro da empresa
+b) Para garantir que o plano esteja alinhado com as mudanças na organização e no ambiente
+c) Para reduzir o número de funcionários
+d) Para cumprir exigências legais
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "fornecedor crítico"?
+a) Um fornecedor que oferece os melhores preços
+b) Um fornecedor cujos serviços ou produtos são essenciais para as operações da empresa
+c) Um fornecedor que atua no exterior
+d) Um fornecedor de tecnologia
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "plano de contingência"?
+a) Um plano de marketing
+b) Um plano alternativo para lidar com situações imprevistas
+c) Um plano de expansão de negócios
+d) Um plano de treinamento
+Resposta correta: b)
+Dificuldade: Médio
+
+Qual é a relação entre GCN e segurança da informação?
+a) GCN é um subconjunto da segurança da informação
+b) Segurança da informação é um componente crítico da GCN
+c) Não há relação entre os dois
+d) GCN substitui a segurança da informação
+Resposta correta: b)
+Dificuldade: Médio
+
+Nível Difícil
+O que é um "plano de recuperação de desastres" (DRP)?
+a) Um plano para reduzir custos
+b) Um plano detalhado para recuperar sistemas de TI após um desastre
+c) Um plano de expansão de negócios
+d) Um plano de comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+Qual é a diferença entre RTO e RPO?
+a) RTO refere-se a dados, enquanto RPO refere-se a operações
+b) RTO é o tempo para recuperar operações, enquanto RPO é o ponto no tempo para recuperar dados
+c) RTO é para TI, enquanto RPO é para finanças
+d) Não há diferença
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "exercício de simulação"?
+a) Um treinamento teórico
+b) Uma simulação realista de uma crise para testar o PCN
+c) Um exercício de team building
+d) Uma análise de mercado
+Resposta correta: b)
+Dificuldade: Difícil
+
+Qual é o papel da governança na GCN?
+a) Reduzir custos
+b) Garantir que a GCN seja integrada à estratégia da organização
+c) Gerenciar fornecedores
+d) Melhorar a comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de TI"?
+a) Um plano para expandir a infraestrutura de TI
+b) Um plano para garantir a continuidade dos serviços de TI em caso de interrupções
+c) Um plano de treinamento para equipes de TI
+d) Um plano de segurança da informação
+Resposta correta: b)
+Dificuldade: Difícil
+
+Nível Médio
+O que é um "plano de resposta a incidentes"?
+a) Um plano para lidar com reclamações de clientes
+b) Um plano para responder a eventos que possam interromper as operações
+c) Um plano de comunicação interna
+d) Um plano de redução de custos
+Resposta correta: b)
+Dificuldade: Médio
+
+Qual é a importância de identificar ativos críticos na GCN?
+a) Para reduzir custos operacionais
+b) Para garantir que os recursos essenciais sejam protegidos e recuperados primeiro
+c) Para aumentar a produtividade dos funcionários
+d) Para cumprir exigências legais
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "plano de recuperação de fornecedores"?
+a) Um plano para negociar melhores preços com fornecedores
+b) Um plano para garantir a continuidade dos serviços de fornecedores críticos
+c) Um plano de expansão de fornecedores
+d) Um plano de treinamento para fornecedores
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "cenário de pior caso" na GCN?
+a) Um cenário otimista para planejamento
+b) Um cenário extremo usado para testar a resiliência do PCN
+c) Um cenário financeiro desfavorável
+d) Um cenário de expansão de negócios
+Resposta correta: b)
+Dificuldade: Médio
+
+Qual é o papel da comunicação durante uma crise?
+a) Aumentar a competitividade da empresa
+b) Manter a transparência e a confiança com stakeholders
+c) Reduzir custos operacionais
+d) Melhorar a produtividade dos funcionários
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "plano de continuidade de cadeia de suprimentos"?
+a) Um plano para reduzir custos de logística
+b) Um plano para garantir a continuidade do fluxo de materiais e serviços
+c) Um plano de expansão de fornecedores
+d) Um plano de treinamento para equipes de logística
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "plano de recuperação de instalações"?
+a) Um plano para reformar escritórios
+b) Um plano para recuperar instalações físicas após um desastre
+c) Um plano de expansão de infraestrutura
+d) Um plano de segurança patrimonial
+Resposta correta: b)
+Dificuldade: Médio
+
+Qual é a importância de treinar funcionários em GCN?
+a) Para aumentar a produtividade
+b) Para garantir que todos saibam como agir em caso de crise
+c) Para reduzir custos operacionais
+d) Para melhorar a comunicação interna
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "plano de continuidade de RH"?
+a) Um plano para contratar novos funcionários
+b) Um plano para garantir a disponibilidade de pessoal essencial durante uma crise
+c) Um plano de treinamento de equipes
+d) Um plano de redução de custos com folha de pagamento
+Resposta correta: b)
+Dificuldade: Médio
+
+O que é um "plano de continuidade de operações"?
+a) Um plano para expandir as operações da empresa
+b) Um plano para manter as operações essenciais durante uma interrupção
+c) Um plano de redução de custos operacionais
+d) Um plano de comunicação interna
+Resposta correta: b)
+Dificuldade: Médio
+
+Nível Difícil
+O que é um "plano de continuidade de negócios baseado em cenários"?
+a) Um plano que considera apenas cenários otimistas
+b) Um plano que considera múltiplos cenários de crise para aumentar a resiliência
+c) Um plano de expansão de negócios
+d) Um plano de redução de custos
+Resposta correta: b)
+Dificuldade: Difícil
+
+Qual é a diferença entre GCN e Gerenciamento de Crises?
+a) GCN foca em prevenção, enquanto Gerenciamento de Crises foca em resposta
+b) GCN foca em manter operações, enquanto Gerenciamento de Crises foca em lidar com a crise em si
+c) GCN é voltado para TI, enquanto Gerenciamento de Crises é voltado para finanças
+d) Não há diferença
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios integrado"?
+a) Um plano que inclui apenas operações de TI
+b) Um plano que integra todos os departamentos e processos da organização
+c) Um plano de expansão de negócios
+d) Um plano de comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em risco"?
+a) Um plano que ignora riscos
+b) Um plano que prioriza ações com base na probabilidade e impacto dos riscos
+c) Um plano de redução de custos
+d) Um plano de comunicação de crise
+Resposta correta: b)
+Dificuldade: Difícil
+
+Qual é a importância de alinhar o PCN à estratégia da organização?
+a) Para aumentar a lucratividade
+b) Para garantir que a continuidade dos negócios apoie os objetivos estratégicos
+c) Para reduzir custos operacionais
+d) Para melhorar a comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em resiliência"?
+a) Um plano que ignora interrupções
+b) Um plano que foca em aumentar a capacidade da organização de se adaptar a mudanças
+c) Um plano de expansão de negócios
+d) Um plano de comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em tecnologia"?
+a) Um plano que ignora a infraestrutura de TI
+b) Um plano que foca na recuperação de sistemas e dados críticos
+c) Um plano de redução de custos
+d) Um plano de comunicação de crise
+Resposta correta: b)
+Dificuldade: Difícil
+
+Qual é a importância de revisar o PCN após um incidente?
+a) Para aumentar a lucratividade
+b) Para identificar lições aprendidas e melhorar o plano
+c) Para reduzir custos operacionais
+d) Para melhorar a comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em compliance"?
+a) Um plano que ignora regulamentações
+b) Um plano que garante o cumprimento de normas e regulamentações
+c) Um plano de expansão de negócios
+d) Um plano de comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em stakeholders"?
+a) Um plano que ignora as partes interessadas
+b) Um plano que considera as necessidades e expectativas dos stakeholders
+c) Um plano de redução de custos
+d) Um plano de comunicação de crise
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em inovação"?
+a) Um plano que ignora novas tecnologias
+b) Um plano que incorpora novas tecnologias e práticas para aumentar a resiliência
+c) Um plano de expansão de negócios
+d) Um plano de comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em sustentabilidade"?
+a) Um plano que ignora impactos ambientais
+b) Um plano que considera impactos ambientais e sociais
+c) Um plano de redução de custos
+d) Um plano de comunicação de crise
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em governança"?
+a) Um plano que ignora a estrutura organizacional
+b) Um plano que alinha a GCN à governança corporativa
+c) Um plano de expansão de negócios
+d) Um plano de comunicação interna
+Resposta correta: b)
+Dificuldade: Difícil
+
+O que é um "plano de continuidade de negócios baseado em cultura organizacional"?
+a) Um plano que ignora a cultura da empresa
+b) Um plano que considera a cultura organizacional para aumentar a adesão ao PCN
+c) Um plano de redução de custos
+d) Um plano de comunicação de crise
+Resposta correta: b)
+Dificuldade: Difícil
+
+Qual é o papel da liderança na GCN?
+a) Reduzir custos operacionais
+b) Garantir o comprometimento e a implementação eficaz do PCN
+c) Melhorar a comunicação interna
+d) Aumentar a lucratividade
+Resposta correta: b)
+Dificuldade: Difícil
+
+
+
+
+
+

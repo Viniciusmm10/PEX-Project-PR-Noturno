@@ -1,0 +1,183 @@
+Nível Fácil
+O que é Gestão de Riscos?
+a) Um processo para eliminar todos os riscos de um projeto.
+b) Um processo de identificação, análise e resposta aos riscos.
+c) Uma técnica para aumentar os riscos em um projeto.
+Resposta correta: b) Um processo de identificação, análise e resposta aos riscos.
+
+Qual é o primeiro passo no processo de Gestão de Riscos?
+a) Análise de riscos.
+b) Identificação de riscos.
+c) Planejamento de respostas aos riscos.
+Resposta correta: b) Identificação de riscos.
+
+O que é um risco positivo?
+a) Um risco que não afeta o projeto.
+b) Um risco que pode trazer benefícios ao projeto.
+c) Um risco que sempre causa prejuízos.
+Resposta correta: b) Um risco que pode trazer benefícios ao projeto.
+
+Qual é o objetivo principal da Gestão de Riscos?
+a) Eliminar todos os riscos.
+b) Minimizar o impacto negativo e maximizar oportunidades.
+c) Ignorar os riscos e focar apenas no planejamento.
+Resposta correta: b) Minimizar o impacto negativo e maximizar oportunidades.
+
+O que é uma matriz de probabilidade e impacto?
+a) Uma ferramenta para priorizar riscos.
+b) Um método para eliminar riscos.
+c) Uma técnica para aumentar os riscos.
+Resposta correta: a) Uma ferramenta para priorizar riscos.
+
+Qual é a diferença entre risco e problema?
+a) Risco é algo que pode acontecer; problema é algo que já aconteceu.
+b) Risco e problema são a mesma coisa.
+c) Problema é algo que pode acontecer; risco é algo que já aconteceu.
+Resposta correta: a) Risco é algo que pode acontecer; problema é algo que já aconteceu.
+
+O que é um plano de contingência?
+a) Um plano para evitar riscos.
+b) Um plano para lidar com riscos que se materializam.
+c) Um plano para aumentar os riscos.
+Resposta correta: b) Um plano para lidar com riscos que se materializam.
+
+Qual é a principal função de um gerente de riscos?
+a) Ignorar os riscos.
+b) Gerenciar e mitigar os riscos do projeto.
+c) Aumentar os riscos para desafiar a equipe.
+Resposta correta: b) Gerenciar e mitigar os riscos do projeto.
+
+O que é mitigação de riscos?
+a) Eliminar completamente os riscos.
+b) Reduzir a probabilidade ou impacto de um risco.
+c) Ignorar os riscos.
+Resposta correta: b) Reduzir a probabilidade ou impacto de um risco.
+
+O que é um registro de riscos?
+a) Um documento que lista todos os riscos identificados.
+b) Um método para eliminar riscos.
+c) Uma técnica para aumentar os riscos.
+Resposta correta: a) Um documento que lista todos os riscos identificados.
+
+Nível Médio
+Qual das seguintes é uma técnica de identificação de riscos?
+a) Análise SWOT.
+b) Matriz de probabilidade e impacto.
+c) Plano de contingência.
+Resposta correta: a) Análise SWOT.
+
+O que é análise qualitativa de riscos?
+a) Uma análise que usa dados numéricos para avaliar riscos.
+b) Uma análise que prioriza riscos com base em sua probabilidade e impacto.
+c) Uma análise que ignora os riscos.
+Resposta correta: b) Uma análise que prioriza riscos com base em sua probabilidade e impacto.
+
+O que é análise quantitativa de riscos?
+a) Uma análise que usa dados numéricos para avaliar riscos.
+b) Uma análise que prioriza riscos com base em opiniões.
+c) Uma análise que ignora os riscos.
+Resposta correta: a) Uma análise que usa dados numéricos para avaliar riscos.
+
+O que é transferência de risco?
+a) Transferir o risco para outra parte, como uma seguradora.
+b) Eliminar o risco completamente.
+c) Ignorar o risco.
+Resposta correta: a) Transferir o risco para outra parte, como uma seguradora.
+
+O que é aceitação de risco?
+a) Aceitar que o risco não pode ser evitado ou mitigado.
+b) Ignorar o risco completamente.
+c) Transferir o risco para outra parte.
+Resposta correta: a) Aceitar que o risco não pode ser evitado ou mitigado.
+
+O que é um risco residual?
+a) Um risco que permanece após a implementação de respostas.
+b) Um risco que foi completamente eliminado.
+c) Um risco que foi transferido para outra parte.
+Resposta correta: a) Um risco que permanece após a implementação de respostas.
+
+O que é um risco secundário?
+a) Um risco que surge como resultado de uma resposta a outro risco.
+b) Um risco que é menos importante.
+c) Um risco que foi transferido para outra parte.
+Resposta correta: a) Um risco que surge como resultado de uma resposta a outro risco.
+
+O que é um gatilho de risco?
+a) Um indicador de que um risco está prestes a ocorrer.
+b) Um método para eliminar riscos.
+c) Uma técnica para aumentar os riscos.
+Resposta correta: a) Um indicador de que um risco está prestes a ocorrer.
+
+O que é um plano de resposta a riscos?
+a) Um plano que descreve como os riscos serão gerenciados.
+b) Um plano para ignorar os riscos.
+c) Um plano para aumentar os riscos.
+Resposta correta: a) Um plano que descreve como os riscos serão gerenciados.
+
+O que é um risco estratégico?
+a) Um risco que afeta os objetivos de longo prazo de uma organização.
+b) Um risco que afeta apenas operações diárias.
+c) Um risco que é irrelevante para a organização.
+Resposta correta: a) Um risco que afeta os objetivos de longo prazo de uma organização.
+
+Nível Difícil
+O que é análise de Monte Carlo em Gestão de Riscos?
+a) Uma técnica de simulação para prever resultados de projetos.
+b) Um método para eliminar riscos.
+c) Uma técnica para aumentar os riscos.
+Resposta correta: a) Uma técnica de simulação para prever resultados de projetos.
+
+O que é valor monetário esperado (VME)?
+a) Uma técnica para calcular o impacto financeiro de riscos.
+b) Um método para ignorar riscos.
+c) Uma técnica para aumentar os riscos.
+Resposta correta: a) Uma técnica para calcular o impacto financeiro de riscos.
+
+O que é análise de sensibilidade?
+a) Uma técnica para determinar como diferentes variáveis afetam os resultados.
+b) Um método para eliminar riscos.
+c) Uma técnica para aumentar os riscos.
+Resposta correta: a) Uma técnica para determinar como diferentes variáveis afetam os resultados.
+
+O que é um risco sistêmico?
+a) Um risco que afeta todo um sistema ou mercado.
+b) Um risco que afeta apenas uma parte de um sistema.
+c) Um risco que é irrelevante para o sistema.
+Resposta correta: a) Um risco que afeta todo um sistema ou mercado.
+
+O que é um risco operacional?
+a) Um risco relacionado às operações diárias de uma organização.
+b) Um risco relacionado a estratégias de longo prazo.
+c) Um risco que é irrelevante para a organização.
+Resposta correta: a) Um risco relacionado às operações diárias de uma organização.
+
+O que é um risco de mercado?
+a) Um risco relacionado a mudanças no mercado.
+b) Um risco relacionado a operações internas.
+c) Um risco que é irrelevante para o mercado.
+Resposta correta: a) Um risco relacionado a mudanças no mercado.
+
+O que é um risco de crédito?
+a) Um risco relacionado à inadimplência de devedores.
+b) Um risco relacionado a operações internas.
+c) Um risco que é irrelevante para o crédito.
+Resposta correta: a) Um risco relacionado à inadimplência de devedores.
+
+O que é um risco de liquidez?
+a) Um risco relacionado à incapacidade de converter ativos em dinheiro.
+b) Um risco relacionado a operações internas.
+c) Um risco que é irrelevante para a liquidez.
+Resposta correta: a) Um risco relacionado à incapacidade de converter ativos em dinheiro.
+
+O que é um risco de reputação?
+a) Um risco relacionado à imagem pública de uma organização.
+b) Um risco relacionado a operações internas.
+c) Um risco que é irrelevante para a reputação.
+Resposta correta: a) Um risco relacionado à imagem pública de uma organização.
+
+O que é um risco de conformidade?
+a) Um risco relacionado ao não cumprimento de leis e regulamentos.
+b) Um risco relacionado a operações internas.
+c) Um risco que é irrelevante para a conformidade.
+Resposta correta: a) Um risco relacionado ao não cumprimento de leis e regulamentos.
+

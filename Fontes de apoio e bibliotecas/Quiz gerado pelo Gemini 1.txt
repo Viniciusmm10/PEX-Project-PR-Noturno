@@ -1,0 +1,201 @@
+Nível de dificuldade: Fácil, Médio, Difícil
+
+1. Qual o principal objetivo da Gestão de Riscos?
+
+a) Minimizar custos.
+b) Maximizar lucros.
+c) Identificar, avaliar e responder aos riscos. (Resposta correta)
+d) Evitar todas as incertezas.
+Nível de dificuldade: Fácil
+
+2. O que é um risco?
+
+a) Uma certeza.
+b) Uma oportunidade.
+c) Um evento incerto que pode afetar objetivos. (Resposta correta)
+d) Uma meta a ser alcançada.
+Nível de dificuldade: Fácil
+
+3. Qual das seguintes opções representa uma etapa do processo de Gestão de Riscos?
+
+a) Planejamento estratégico.
+b) Identificação de riscos. (Resposta correta)
+c) Análise de mercado.
+d) Controle de qualidade.
+Nível de dificuldade: Fácil
+
+4. O que é análise qualitativa de riscos?
+
+a) Medição numérica dos riscos.
+b) Avaliação subjetiva da probabilidade e impacto dos riscos. (Resposta correta)
+c) Eliminação de todos os riscos.
+d) Transferência dos riscos para terceiros.
+Nível de dificuldade: Médio
+
+5. O que é análise quantitativa de riscos?
+
+a) Avaliação subjetiva dos riscos.
+b) Medição numérica da probabilidade e impacto dos riscos. (Resposta correta)
+c) Priorização dos riscos com base na intuição.
+d) Aceitação de todos os riscos.
+Nível de dificuldade: Médio
+
+6. Qual das seguintes opções representa uma resposta a riscos?
+
+a) Ignorar o risco.
+b) Transferir o risco para um seguro. (Resposta correta)
+c) Aumentar a probabilidade do risco.
+d) Eliminar todas as oportunidades.
+Nível de dificuldade: Médio
+
+7. O que é apetite por risco?
+
+a) Aversão total a riscos.
+b) Nível de risco que uma organização está disposta a aceitar. (Resposta correta)
+c) Eliminação de todos os riscos.
+d) Busca por riscos elevados.
+Nível de dificuldade: Médio
+
+8. O que é tolerância a riscos?
+
+a) Nível máximo de risco aceitável. (Resposta correta)
+b) Aversão total a riscos.
+c) Eliminação de todos os riscos.
+d) Busca por riscos elevados.
+Nível de dificuldade: Médio
+
+9. Qual das seguintes opções representa um tipo de risco?
+
+a) Risco de mercado. (Resposta correta)
+b) Risco de oportunidade.
+c) Risco de sucesso.
+d) Risco de estabilidade.
+Nível de dificuldade: Fácil
+
+10. O que é um risco estratégico?
+
+a) Risco relacionado a operações diárias.
+b) Risco que afeta os objetivos de longo prazo da organização. (Resposta correta)
+c) Risco de segurança no trabalho.
+d) Risco de falha de equipamentos.
+Nível de dificuldade: Médio
+
+11. O que é um risco operacional?
+
+a) Risco relacionado a eventos externos.
+b) Risco de falhas em processos internos. (Resposta correta)
+c) Risco de mudanças na legislação.
+d) Risco de desastres naturais.
+Nível de dificuldade: Médio
+
+12. O que é um risco financeiro?
+
+a) Risco de falha de equipamentos.
+b) Risco de perdas monetárias. (Resposta correta)
+c) Risco de acidentes de trabalho.
+d) Risco de perda de reputação.
+Nível de dificuldade: Médio
+
+13. O que é um risco de conformidade?
+
+a) Risco de falha de equipamentos.
+b) Risco de não cumprimento de leis e regulamentos. (Resposta correta)
+c) Risco de perda de reputação.
+d) Risco de falhas em processos internos.
+Nível de dificuldade: Médio
+
+14. O que é um risco de reputação?
+
+a) Risco de perdas monetárias.
+b) Risco de danos à imagem da organização. (Resposta correta)
+c) Risco de acidentes de trabalho.
+d) Risco de falhas em processos internos.
+Nível de dificuldade: Médio
+
+15. Qual das seguintes opções representa uma ferramenta de Gestão de Riscos?
+
+a) Análise SWOT.
+b) Matriz de riscos. (Resposta correta)
+c) Diagrama de Gantt.
+d) Fluxograma.
+Nível de dificuldade: Médio
+
+16. O que é um plano de resposta a riscos?
+
+a) Documento que descreve os riscos identificados.
+b) Documento que define as ações para lidar com os riscos. (Resposta correta)
+c) Documento que lista as oportunidades da organização.
+d) Documento que estabelece as metas da organização.
+Nível de dificuldade: Médio
+
+17. O que é monitoramento de riscos?
+
+a) Identificação de novos riscos.
+b) Acompanhamento contínuo dos riscos e da eficácia das respostas. (Resposta correta)
+c) Eliminação de todos os riscos.
+d) Transferência dos riscos para terceiros.
+Nível de dificuldade: Médio
+
+18. O que é revisão de riscos?
+
+a) Eliminação de todos os riscos.
+b) Avaliação periódica da eficácia do processo de Gestão de Riscos. (Resposta correta)
+c) Identificação de novos riscos.
+d) Transferência dos riscos para terceiros.
+Nível de dificuldade: Médio
+
+19. O que é comunicação de riscos?
+
+a) Eliminação de todos os riscos.
+b) Compartilhamento de informações sobre riscos com as partes interessadas. (Resposta correta)
+c) Transferência dos riscos para terceiros.
+d) Ignorar os riscos.
+Nível de dificuldade: Médio
+
+20. O que é cultura de riscos?
+
+a) Aversão total a riscos.
+b) Conjunto de valores e comportamentos relacionados a riscos na organização. (Resposta correta)
+c) Eliminação de todos os riscos.
+d) Busca por riscos elevados.
+Nível de dificuldade: Médio
+
+21. O que é um risco residual?
+
+a) Risco que foi eliminado.
+b) Risco que permanece após a implementação das respostas. (Resposta correta)
+c) Risco que foi transferido para terceiros.
+d) Risco que nunca foi identificado.
+Nível de dificuldade: Médio
+
+22. O que é um risco emergente?
+
+a) Risco que já foi identificado e avaliado.
+b) Risco novo ou em desenvolvimento. (Resposta correta)
+c) Risco que foi eliminado.
+d) Risco que foi transferido para terceiros.
+Nível de dificuldade: Médio
+
+23. O que é um risco sistêmico?
+
+a) Risco que afeta apenas uma parte da organização.
+b) Risco que afeta todo o sistema ou mercado. (Resposta correta)
+c) Risco que foi eliminado.
+d) Risco que foi transferido para terceiros.
+Nível de dificuldade: Médio
+
+24. O que é um risco de projeto?
+
+a) Risco que afeta toda a organização.
+b) Risco que afeta o sucesso de um projeto específico. (Resposta correta)
+c) Risco que foi eliminado.
+d) Risco que foi transferido para terceiros.
+Nível de dificuldade: Médio
+
+25. O que é um risco de segurança da informação?
+
+a) Risco de falha de equipamentos.
+b) Risco de perda, roubo ou uso indevido de dados. (Resposta correta)
+c) Risco de acidentes de trabalho.
+d) Risco de perda de reputação.
+Nível de dificuldade: Médio
