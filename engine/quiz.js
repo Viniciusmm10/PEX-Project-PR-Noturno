@@ -12,57 +12,56 @@ const Quiz = {
 
 async function Perguntas(){
 
-const result = await connection.query(
-    `SELECT
-        p.idpergunta,
-        p.pergunta
-    FROM quiz.perguntas AS p;`, 
-    { raw: true }
-)
+    const result = await connection.query(
+        `SELECT
+            p.idpergunta,
+            p.pergunta
+        FROM quiz.perguntas AS p;`, 
+        { raw: true }
+    )
 
-return result[0]
+    return result[0]
 
 }
     
 async function Alternativas(){
 
-const result = await connection.query(
-    `SELECT 
-        a.pergunta_idpergunta, 
-        a.alternativa 
-    FROM quiz.alternativas AS a;`, 
-    { raw: true }
-)
+    const result = await connection.query(
+        `SELECT 
+            a.idalternativas,
+            a.pergunta_idpergunta, 
+            a.alternativa 
+        FROM quiz.alternativas AS a;`, 
+        { raw: true }
+    )
 
-return result[0]
+    return result[0]
 
 }
 
 async function Perguntas_Aleatorias(min, max, qtd){
 
-const perguntas = await Perguntas();
+    const perguntas = await Perguntas();
 
-let filtro = idsAleatorios(min, max, qtd);
-let result = perguntas.filter(o => filtro.has(o.idpergunta));
+    let filtro = idsAleatorios(min, max, qtd);
+    let result = perguntas.filter(o => filtro.has(o.idpergunta));
 
-return Promise.resolve(result)
+    return Promise.resolve(result)
 
 }
 
 async function Alternativas_Aleatorias() {
-// let alternativas = []
-// alternativas =  [... await Alternativas()];
-const alternativas =  await Alternativas();
 
-let filtro = idsAleatorios(1 , alternativas.length, alternativas.length);
-// let result = alternativas.filter(o => filtro.has(o.pergunta_idpergunta));
+    const alternativas =  await Alternativas();
 
-let result = [];
-filtro.forEach(id => {
-    result.push(alternativas.find(o => o.pergunta_idpergunta == id))
-})
+    let filtro = idsAleatorios(1 , alternativas.length, alternativas.length);
 
-return Promise.resolve(result)
+    let result = [];
+    filtro.forEach(id => {
+        result.push(alternativas.find(o => o.idalternativas == id))
+    })
+
+    return Promise.resolve(result)
     
 }
 

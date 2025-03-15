@@ -17,7 +17,7 @@ app.use(bodyParser.json());
 app.get("/", async (req, res) => {
 
     const questions = await Quiz.Perguntas_Aleatorias(1, 50, 3);
-    const answers = await Quiz.Alternativas();
+    const answers = await Quiz.Alternativas_Aleatorias();
 
     res.render("index", {
         questions: questions,
