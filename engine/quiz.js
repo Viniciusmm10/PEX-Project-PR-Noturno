@@ -16,7 +16,13 @@ async function Perguntas(){
         `SELECT
             p.idpergunta,
             p.pergunta
-        FROM quiz.perguntas AS p;`, 
+        FROM 
+            quiz.perguntas AS p
+        INNER JOIN
+            nivel AS n
+        ON p.nivel_idnivel = n.idnivel
+        WHERE
+            n.nivel = "Fácil";`, 
         { raw: true }
     )
 
