@@ -1,43 +1,81 @@
-<%- include('partials/header.ejs'); %>
-<body>
-    <%- include('partials/navbar.ejs'); %>
-    <div class="container">
-        
-        <h1>Quiz - Gestão de Riscos e Continuidade de Negócios</h1>
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+    <div class="container mt-4">
+      <div class="quiz-container">
+        <h5>
+          Pergunta 1
+          <span class="float-end">Respondidas 03/10 - Fácil</span>
+          <span class="float-end mx-5">Progresso geral: 10%</span>
+        </h5>
+        <div class="p-2 border mb-3">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+          augue congue eros interdum dictum. Suspendisse elementum nibh ac leo
+          mattis volutpat. Nulla a tempus dolor.
+        </div>
 
-        <form method="POST" action="">
-
-            <% 
-                let count1 = 1;
-                let count2 = 1;
-                questions.forEach(question => { 
-            %>
-                <div class="card form-question">
-                    <div class="card-header">
-                        <h3><%= question.pergunta %></h3>
-                    </div>
-
-                    <% 
-                        let answer = answers.filter(a => a.pergunta_idpergunta == question.idpergunta)
-                    %>
-                    
-                    <div class="card body">
-                        
-                    <% answer.forEach(a => { %> 
-                        <div class="form-check options">
-                            <input class="form-check-input" type="radio" name="opcao_pergunta_<%= count1 %>" id="resposta_<%= count2 %>">
-                            <label class="form-check-label" for="resposta_<%= count2 %>"><%= a.alternativa %></label>
-                        </div>
-                    <% 
-                        count2++
-                    }) %>
-
-                    </div>
-                </div>
-            <% 
-                count1++
-            }) %>
-            <button type="button" class="btn btn-primary form-question">Enviar respostas</button>
+        <form>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="resposta"
+              id="resposta1"
+            />
+            <label class="form-check-label" for="resposta1"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="resposta"
+              id="resposta2"
+            />
+            <label class="form-check-label" for="resposta2"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="resposta"
+              id="resposta3"
+            />
+            <label class="form-check-label" for="resposta3"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="resposta"
+              id="resposta4"
+            />
+            <label class="form-check-label" for="resposta4"
+              >Lorem ipsum dolor sit amet, consectetur adipiscing elit</label
+            >
+          </div>
         </form>
+        <p class="mt-2 small">Apenas 1 resposta está correta!!</p>
+
+        <div class="d-flex justify-content-between">
+          <button class="btn btn-primary">RESPONDER</button>
+          <button class="btn btn-primary">PRÓXIMA</button>
+        </div>
+
+        <div class="mt-3 p-2 border">Lorem ipsum dolor sit amet, consecte</div>
+      </div>
     </div>
-<%- include('partials/footer.ejs'); %>
+    <%- include('partials/footer') %>
+  </body>
+</html>
