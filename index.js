@@ -20,6 +20,7 @@ app.get("/", async (req, res) => {
     const answers = await Quiz.Alternativas_Aleatorias();
 
     res.render("index", {
+        title: "Quiz - Projeto PEX",
         questions: questions,
         answers: answers
     });
