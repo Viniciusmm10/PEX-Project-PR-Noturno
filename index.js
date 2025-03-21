@@ -16,10 +16,11 @@ app.use(bodyParser.json());
 
 app.get("/", async (req, res) => {
 
-    const questions = await Quiz.Perguntas_Aleatorias(1, 50, 3);
+    const questions = await Quiz.Perguntas_Aleatorias(1, 50, 10);
     const answers = await Quiz.Alternativas_Aleatorias();
 
     res.render("index", {
+        title: "Quiz - Projeto PEX",
         questions: questions,
         answers: answers
     });
