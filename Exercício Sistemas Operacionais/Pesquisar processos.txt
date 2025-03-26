@@ -1,0 +1,7 @@
+
+Processos
+csrss.exe - Julio
+svchost.exe - Vitor
+omtsreco.exe - Samuel
+igfxTray.exe - Diego
+Video.UI.exe - Vinicius
