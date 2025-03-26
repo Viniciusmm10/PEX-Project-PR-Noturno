@@ -3,6 +3,8 @@ Processos
 csrss.exe - Julio
 
 svchost.exe - Vitor
+"svchost.exe" é a abreviação de "Service Host" (Host de Serviço). É um processo genérico que o Windows utiliza para executar vários serviços.
+Em vez de cada serviço rodar em seu próprio processo separado, o Windows os agrupa sob o "svchost.exe" para conservar os recursos do sistema.
 
 omtsreco.exe - Samuel
 O processo omtsreco.exe no Windows é parte do Oracle MTS Recovery Service, desenvolvido pela Oracle Corporation. Este serviço é um componente crucial do software de banco de dados da Oracle, responsável por gerenciar transações distribuídas. Ele garante que as transações sejam concluídas com sucesso ou revertidas corretamente em caso de falha, mantendo a integridade dos dados no banco de dados
