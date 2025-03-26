@@ -1,6 +1,12 @@
 
 Processos
 csrss.exe - Julio
+O csrss.exe (Client Server Runtime Process) é um processo essencial do Windows responsável por funções críticas do sistema operacional, como a criação e o encerramento de threads e a gestão de janelas em versões mais antigas do Windows. Ele faz parte da arquitetura do subsistema do Windows e roda em segundo plano como um processo protegido.
+
+Principais características do csrss.exe:
+	•	Está localizado na pasta C:\Windows\System32.
+	•	Executa tarefas relacionadas à interface gráfica e à criação de processos.
+	•	Sempre é iniciado com o sistema operacional e não pode ser encerrado sem causar uma falha grave no Windows (tela azul).
 
 svchost.exe - Vitor
 "svchost.exe" é a abreviação de "Service Host" (Host de Serviço). É um processo genérico que o Windows utiliza para executar vários serviços.
