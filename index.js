@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const Quiz = require("./engine/quiz"); //Database
-const Visitante = require("./database/visitante")
 
 // Estou dizendo para o Express usar o EJS como View Engine
 app.set('view engine','ejs');
@@ -56,7 +55,7 @@ app.post("/salvarvisitante", (req, res) => {
         telefone: telefone
     }
 
-    Visitante.Criar(dados_visitante)
+    Quiz.CriarVisitante(dados_visitante)
 
     res.send(dados)
 
