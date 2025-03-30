@@ -7,7 +7,8 @@ const Quiz = {
     Perguntas_Aleatorias,
     Alternativas_Aleatorias,
     ResponderPergunta,
-    CriarVisitante
+    CriarVisitante,
+    Questionario
 }
 
 async function Perguntas(){
@@ -70,6 +71,34 @@ async function Alternativas_Aleatorias() {
     return Promise.resolve(result)
     
 }
+
+async function Questionario(min, max, qtd){
+    let perguntas = await Perguntas_Aleatorias(min, max, qtd)
+    let alternativas = await Alternativas_Aleatorias()
+    let questoes = []
+
+    perguntas.forEach(pergunta => {
+        let respostas = alternativas.filter(alternativa => {
+            return alternativa.pergunta_idpergunta == pergunta.idpergunta
+        })
+
+        questoes.push(
+            {
+                id_pergunta: pergunta.idpergunta,
+                pergunta: pergunta.pergunta,
+                alternativas: respostas
+            }
+        )
+    })
+
+    return questoes
+
+}
+
+
+
+
+
 
 async function test() {
     const result = await Alternativas_Aleatorias();

@@ -1,0 +1,105 @@
+<%- include('partials/header') %>
+
+<!-- <div class="container mt-4">
+
+    <div class="quiz-container">
+      <h5>
+        Pergunta 1
+        <span class="float-end">Questões: 03/10 - Fácil</span>
+        <span class="float-end mx-5">Progresso geral: 10%</span>
+      </h5>
+      <div class="p-2 border mb-3">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+        augue congue eros interdum dictum. Suspendisse elementum nibh ac leo
+        mattis volutpat. Nulla a tempus dolor.
+      </div>
+
+      <form>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="resposta"
+            id="resposta1"
+          />
+          <label class="form-check-label" for="resposta1"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit</label
+          >
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="resposta"
+            id="resposta2"
+          />
+          <label class="form-check-label" for="resposta2"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit</label
+          >
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="resposta"
+            id="resposta3"
+          />
+          <label class="form-check-label" for="resposta3"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit</label
+          >
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="resposta"
+            id="resposta4"
+          />
+          <label class="form-check-label" for="resposta4"
+            >Lorem ipsum dolor sit amet, consectetur adipiscing elit</label
+          >
+        </div>
+      </form>
+      <p class="mt-3 small">Apenas 1 resposta está correta!!</p>
+
+      <div class="d-flex justify-content-between">
+        <button class="btn btn-primary">RESPONDER</button>
+        <button class="btn btn-primary">PRÓXIMA</button>
+      </div>
+
+      <div class="mt-3 p-2 border">Lorem ipsum dolor sit amet, consecte</div>
+    </div>
+</div> -->
+
+
+<% 
+
+    let letras_alternativas = ["a)","b)","c)","d)"]
+    let i = 0
+    questionario.forEach(pergunta => { 
+    
+%>
+    <p><%= pergunta.pergunta %></p>
+    <ul>
+    <% pergunta.alternativas.forEach(alternativa => { %>
+        <li><%= letras_alternativas[i] + " " + alternativa.alternativa %></li>
+    <% 
+        i++
+        }) 
+    %>
+    </ul>
+<% 
+    i = 0
+    }) 
+%>
+
+
+
+
+
+
+
+
+
+
+<%- include('partials/footer') %>
