@@ -17,7 +17,7 @@ app.get("/", async (req, res) => {
 
     const questionario = await Quiz.Questionario(1, 50, 10);
 
-    res.render("index", {
+    res.render("quiz", {
         title: "Quiz - Projeto PEX",
         questionario: questionario
     });

@@ -146,4 +146,26 @@ footer {
   color: rgb(31, 33, 49)
 }
 
+.card-title{
+  background-color: #122231;
+  color: white;
+}
+
+.card-title h4{
+  font-size: 16px;
+}
+
+.card-options{
+  background-color:rgb(238, 238, 240);
+  font-size: 14px;
+}
+
+.card{
+  margin-top: 10px;
+}
+
+.questionario button{
+  margin-top: 10px;
+}
+
 
