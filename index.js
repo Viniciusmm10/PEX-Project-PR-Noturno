@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const session = require("express-session");
 const Quiz = require("./engine/quiz"); //Database
 
 // Estou dizendo para o Express usar o EJS como View Engine
@@ -11,21 +12,27 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
+//Sessões no Express
+app.use(
+    session({
+        secret: "keyboard cat",
+        resave: false,
+        saveUninitialized: true,
+        cookie: {secure: false}
+    })
+)
+
+
 //Rotas
 
 app.get("/", async (req, res) => {
 
-    const questionario = await Quiz.Questionario(1, 50, 10);
-
-    res.render("quiz", {
-        title: "Quiz - Projeto PEX",
-        questionario: questionario
-    });
+    res.render("visitante");
 
 });
 
 
-app.post("/salvarvisitante", (req, res) => {
+app.post("/salvarvisitante", async (req, res) => {
     let nome = req.body.nome
     let empresa = req.body.empresa
     let area = req.body.area
@@ -33,16 +40,16 @@ app.post("/salvarvisitante", (req, res) => {
     let email = req.body.email
     let telefone = req.body.telefone
 
-    let dados = `
-        <pre style="font-size: 20px;">
-        Nome: ${nome}
-        Empresa: ${empresa}
-        Área: ${area}
-        Cargo: ${cargo}
-        E-mail: ${email}
-        Telefone: ${telefone}
-        </pre>
-    `
+    // let dados = `
+    //     <pre style="font-size: 20px;">
+    //     Nome: ${nome}
+    //     Empresa: ${empresa}
+    //     Área: ${area}
+    //     Cargo: ${cargo}
+    //     E-mail: ${email}
+    //     Telefone: ${telefone}
+    //     </pre>
+    // `
 
     const dados_visitante = {
         nome: nome,
@@ -53,12 +60,57 @@ app.post("/salvarvisitante", (req, res) => {
         telefone: telefone
     }
 
-    Quiz.CriarVisitante(dados_visitante)
+    let id = await Quiz.CriarVisitante(dados_visitante)
 
-    res.send(dados)
+    //res.send(dados)
+    const questionario = await Quiz.Questionario(1, 50, 10);
+
+    res.render("quiz", {
+        title: "Quiz - Projeto PEX",
+        questionario: questionario,
+        idusuario: id.idusuario
+    });
 
 })
 
+
+app.post("/salvarrespostas", async (req, res) => {
+
+    let id_usuario = req.body.idusuario
+    let respostas = req.body
+
+    let matriz_resposta = []
+
+    for(indice in respostas){
+
+        if(respostas[indice].includes(";")){
+
+            let valor = respostas[indice].split(";")
+            matriz_resposta.push([
+                valor[0],
+                valor[1],
+                id_usuario
+            ])
+
+        }
+    }
+
+    matriz_resposta.forEach(e => {
+        Quiz.ResponderPergunta(e[2], e[0], e[1])
+    })
+
+    // res.send(matriz_resposta)
+
+    const resultado = await Quiz.Resultado(id_usuario)
+
+    // res.render("resultado", {
+    //     resultado
+    // });
+
+    res.send(resultado)
+
+
+})
 
 
 

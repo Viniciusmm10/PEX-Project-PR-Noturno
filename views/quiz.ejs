@@ -2,13 +2,16 @@
 
 <div class="container mt-4">
 
-  <form method="POST" action="" class="questionario">
+  <form method="POST" action="/salvarrespostas" class="questionario">
     
+    <h1>Id do usuário: <%= idusuario %></h1>
+
     <% 
       let letras_alternativas = ["a)","b)","c)","d)"]
       let i = 0
       questionario.forEach(pergunta => {  
     %>
+
       <div class="card">  
         <div class="card-header card-title">
           <h4><%= pergunta.pergunta %></h4>
@@ -17,7 +20,7 @@
         <div class="card-body card-options">
         <% pergunta.alternativas.forEach(alternativa => { %>
             <div class="form-check">
-              <input type="radio" class="form-check-input" id="<%= alternativa.idalternativas%>" name="<%= pergunta.id_pergunta %>">
+              <input type="radio" class="form-check-input" id="<%= alternativa.idalternativas%>" name="<%= 'Pergunta_' + String(pergunta.id_pergunta) %>" value="<%= String(pergunta.id_pergunta) + ';' + String(alternativa.idalternativas) %>">
               <label class="form-check-label" for="<%= alternativa.idalternativas %>">
                 <%= letras_alternativas[i] + " " + alternativa.alternativa %>
               </label>
@@ -26,14 +29,17 @@
             i++
             }) 
         %>
-        <button type="button" class="btn btn-dark">Responder</button>
         </div>
       </div>
     <% 
     i = 0
     }) 
     %>
-        
+
+    <button class="btn btn-dark" id="Responder">Responder</button>
+
+    <input type="hidden" name="idusuario" value="<%= idusuario %>">
+
   </form>
 </div>
 

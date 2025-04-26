@@ -8,7 +8,8 @@ const Quiz = {
     Alternativas_Aleatorias,
     ResponderPergunta,
     CriarVisitante,
-    Questionario
+    Questionario,
+    Resultado
 }
 
 async function Perguntas(){
@@ -97,9 +98,6 @@ async function Questionario(min, max, qtd){
 
 
 
-
-
-
 async function test() {
     const result = await Alternativas_Aleatorias();
     console.log(result);
@@ -137,9 +135,12 @@ return Promise.resolve(true)
 
 }
 
-function CriarVisitante(visitante){
+async function CriarVisitante(visitante){
 
-    connection.query(`
+    const data_atual = new Date()
+
+
+    await connection.query(`
         INSERT INTO usuarios(
             nome,
             empresa,
@@ -165,11 +166,60 @@ function CriarVisitante(visitante){
             cargo: visitante.cargo,
             email: visitante.email,
             telefone: visitante.telefone,
-            datahora: new Date()
+            datahora: data_atual
         },
         type: Sequelize.QueryTypes.INSERT,
     })
+
+
+    const r = await connection.query(`
+        SELECT 
+            idusuario
+        FROM
+            usuarios u
+        WHERE
+            u.nome = '${visitante.nome}'
+            AND
+            u.datacriacao = '${data_atual.getFullYear()}-${Number(data_atual.getMonth()) + 1}-${data_atual.getDate()} ${data_atual.getHours()}:${data_atual.getMinutes()}:${data_atual.getSeconds()}';
+    `,
+    { raw: true })
+
+    return Promise.resolve(...r[0])
+
 }
+
+
+async function Resultado(id_usuario){
+
+    const result = await connection.query(
+        `SELECT
+            u.nome,
+            IF(r.alternativas_idalternativas = c.alternativas_idalternativas, "Resposta certa", "Resposta errada") AS resultado,
+            COUNT(*) AS quantidade
+        FROM respostas_usuarios r
+        INNER JOIN resposta_certa c ON r.pergunta_idpergunta = c.pergunta_idpergunta
+        INNER JOIN usuarios u ON r.usuarios_idusuario = u.idusuario
+        WHERE r.usuarios_idusuario = ${id_usuario}
+        GROUP BY
+            u.nome,
+            resultado;`, 
+        { raw: true }
+    )
+
+    return result[0]
+
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Funções auxiliares
