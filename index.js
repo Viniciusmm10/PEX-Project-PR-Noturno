@@ -40,17 +40,6 @@ app.post("/salvarvisitante", async (req, res) => {
     let email = req.body.email
     let telefone = req.body.telefone
 
-    // let dados = `
-    //     <pre style="font-size: 20px;">
-    //     Nome: ${nome}
-    //     Empresa: ${empresa}
-    //     Área: ${area}
-    //     Cargo: ${cargo}
-    //     E-mail: ${email}
-    //     Telefone: ${telefone}
-    //     </pre>
-    // `
-
     const dados_visitante = {
         nome: nome,
         empresa: empresa,
