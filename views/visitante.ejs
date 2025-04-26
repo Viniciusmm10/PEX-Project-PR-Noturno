@@ -2,6 +2,17 @@
 <%- include('partials/header') %>
 
     <div class="container">
+
+        <%  
+            if(typeof erros !== "undefined"){
+                erros.forEach(erro => { 
+        %>
+                <div class="alert alert-danger"><%= erro.texto %></div>
+        <%      }) 
+            }
+        %>
+
+
         <div class="card form-user">
             <div class="card-header user-header">
                 Dados do Visitante

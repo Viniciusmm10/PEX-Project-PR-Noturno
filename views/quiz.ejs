@@ -20,7 +20,7 @@
         <div class="card-body card-options">
         <% pergunta.alternativas.forEach(alternativa => { %>
             <div class="form-check">
-              <input type="radio" class="form-check-input" id="<%= alternativa.idalternativas%>" name="<%= 'Pergunta_' + String(pergunta.id_pergunta) %>" value="<%= String(pergunta.id_pergunta) + ';' + String(alternativa.idalternativas) %>">
+              <input type="radio" class="form-check-input" id="<%= alternativa.idalternativas%>" name="<%= pergunta.id_pergunta %>" value="<%= alternativa.idalternativas %>">
               <label class="form-check-label" for="<%= alternativa.idalternativas %>">
                 <%= letras_alternativas[i] + " " + alternativa.alternativa %>
               </label>

@@ -33,32 +33,58 @@ app.get("/", async (req, res) => {
 
 
 app.post("/salvarvisitante", async (req, res) => {
-    let nome = req.body.nome
-    let empresa = req.body.empresa
-    let area = req.body.area
-    let cargo = req.body.cargo
-    let email = req.body.email
-    let telefone = req.body.telefone
 
-    const dados_visitante = {
-        nome: nome,
-        empresa: empresa,
-        area: area,
-        cargo: cargo,
-        email: email,
-        telefone: telefone
+    let erros = []
+
+    if(!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null){
+        erros.push({texto: "Nome inválido."})
     }
 
-    let id = await Quiz.CriarVisitante(dados_visitante)
+    if(!req.body.empresa || typeof req.body.empresa == undefined || req.body.empresa == null){
+        erros.push({texto: "Empresa inválida."})
+    }
 
-    //res.send(dados)
-    const questionario = await Quiz.Questionario(1, 50, 10);
+    if(!req.body.area || typeof req.body.area == undefined || req.body.area == null){
+        erros.push({texto: "Área inválida."})
+    }
 
-    res.render("quiz", {
-        title: "Quiz - Projeto PEX",
-        questionario: questionario,
-        idusuario: id.idusuario
-    });
+    if(!req.body.cargo || typeof req.body.cargo == undefined || req.body.cargo == null){
+        erros.push({texto: "Cargo inválida."})
+    }
+
+    if(!req.body.email || typeof req.body.email == undefined || req.body.email == null){
+        erros.push({texto: "E-mail inválido."})
+    }
+
+    if(!req.body.telefone || typeof req.body.telefone == undefined || req.body.telefone == null){
+        erros.push({texto: "Telefone inválido."})
+    }
+
+    if(erros.length > 0){
+        res.render("visitante", {
+            erros: erros
+        })
+    }else{
+        const dados_visitante = {
+            nome: req.body.nome,
+            empresa: req.body.empresa,
+            area: req.body.area,
+            cargo: req.body.cargo,
+            email: req.body.email,
+            telefone: req.body.telefone
+        }
+    
+        let id = await Quiz.CriarVisitante(dados_visitante)
+    
+        //res.send(dados)
+        const questionario = await Quiz.Questionario(1, 50, 10);
+    
+        res.render("quiz", {
+            title: "Quiz - Projeto PEX",
+            questionario: questionario,
+            idusuario: id.idusuario
+        });
+    }
 
 })
 
@@ -68,39 +94,18 @@ app.post("/salvarrespostas", async (req, res) => {
     let id_usuario = req.body.idusuario
     let respostas = req.body
 
-    let matriz_resposta = []
-
     for(indice in respostas){
 
-        if(respostas[indice].includes(";")){
-
-            let valor = respostas[indice].split(";")
-            matriz_resposta.push([
-                valor[0],
-                valor[1],
-                id_usuario
-            ])
-
+        if(indice != 'idusuario'){
+            Quiz.ResponderPergunta(id_usuario, indice, respostas[indice])
         }
     }
 
-    matriz_resposta.forEach(e => {
-        Quiz.ResponderPergunta(e[2], e[0], e[1])
-    })
-
-    // res.send(matriz_resposta)
-
     const resultado = await Quiz.Resultado(id_usuario)
-
-    // res.render("resultado", {
-    //     resultado
-    // });
 
     res.send(resultado)
 
-
 })
-
 
 
 app.listen(80, () => {console.log("App rodando!");});
