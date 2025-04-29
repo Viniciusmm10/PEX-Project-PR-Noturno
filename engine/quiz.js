@@ -215,19 +215,28 @@ async function RelatorioAvaliacao(id_usuario){
 
     const result = await connection.query(
         `SELECT
-            p.pergunta,
-            a.alternativa,
-            IF(
-                r.alternativas_idalternativas = c.alternativas_idalternativas, 
-                "Resposta certa", 
-                "Resposta errada"
-            ) AS resultado,
-            c.comentario
-        FROM respostas_usuarios r
-        INNER JOIN perguntas p ON r.pergunta_idpergunta = p.idpergunta
-        INNER JOIN alternativas a ON r.alternativas_idalternativas = a.idalternativas
-        INNER JOIN resposta_certa c ON r.pergunta_idpergunta = c.pergunta_idpergunta
-        WHERE r.usuarios_idusuario = ${id_usuario};`, 
+            z.pergunta,
+            z.alternativa_escolhida,
+            x.alternativa AS alternativa_certa,
+            z.resultado,
+            z.comentario
+        FROM
+            (SELECT
+                p.pergunta,
+                a.alternativa AS alternativa_escolhida,
+                c.alternativas_idalternativas,
+                IF(
+                    r.alternativas_idalternativas = c.alternativas_idalternativas, 
+                    "Resposta certa", 
+                    "Resposta errada"
+                ) AS resultado,
+                c.comentario
+            FROM respostas_usuarios r
+            INNER JOIN perguntas p ON r.pergunta_idpergunta = p.idpergunta
+            INNER JOIN alternativas a ON r.alternativas_idalternativas = a.idalternativas
+            INNER JOIN resposta_certa c ON r.pergunta_idpergunta = c.pergunta_idpergunta
+            WHERE r.usuarios_idusuario = ${id_usuario}) AS z
+        INNER JOIN alternativas x ON z.alternativas_idalternativas = x.idalternativas`, 
         { raw: true }
     )
 
