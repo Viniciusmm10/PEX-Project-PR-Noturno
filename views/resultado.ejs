@@ -1,0 +1,49 @@
+
+<%- include('partials/header') %>
+
+    <div class="container">
+
+    <% 
+        let i = 1
+        resultado.forEach(r => {
+    %>
+        <h4><%= String(i) + ". " + r.pergunta %></h4>
+
+        <% 
+            if(r.resultado == "Resposta certa"){
+        %>
+        <div class="alert alert-success" role="alert">
+            <p><%= r.alternativa %><strong> Certa resposta</strong></p>
+            <hr>
+            <p><strong>Comentário: </strong><%= r.comentario%></p>
+        </div>
+        <%
+            }
+        %>
+
+        <% 
+            if(r.resultado == "Resposta errada"){
+        %>
+        <div class="alert alert-danger" role="alert">
+            <p><%= r.alternativa %><strong> Resposta errada</strong></p>
+            <hr>
+            <p><strong>Comentário: </strong><%= r.comentario%></p>
+        </div>
+        <%
+            }
+        %>
+
+    <%    
+        i++  
+        })
+    %>
+
+    </div>
+
+<%- include('partials/footer') %>
+
+
+
+
+
+

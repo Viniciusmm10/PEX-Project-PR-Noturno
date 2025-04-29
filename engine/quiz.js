@@ -9,7 +9,8 @@ const Quiz = {
     ResponderPergunta,
     CriarVisitante,
     Questionario,
-    Resultado
+    Resultado,
+    RelatorioAvaliacao
 }
 
 async function Perguntas(){
@@ -203,6 +204,30 @@ async function Resultado(id_usuario){
         GROUP BY
             u.nome,
             resultado;`, 
+        { raw: true }
+    )
+
+    return result[0]
+
+}
+
+async function RelatorioAvaliacao(id_usuario){
+
+    const result = await connection.query(
+        `SELECT
+            p.pergunta,
+            a.alternativa,
+            IF(
+                r.alternativas_idalternativas = c.alternativas_idalternativas, 
+                "Resposta certa", 
+                "Resposta errada"
+            ) AS resultado,
+            c.comentario
+        FROM respostas_usuarios r
+        INNER JOIN perguntas p ON r.pergunta_idpergunta = p.idpergunta
+        INNER JOIN alternativas a ON r.alternativas_idalternativas = a.idalternativas
+        INNER JOIN resposta_certa c ON r.pergunta_idpergunta = c.pergunta_idpergunta
+        WHERE r.usuarios_idusuario = ${id_usuario};`, 
         { raw: true }
     )
 
