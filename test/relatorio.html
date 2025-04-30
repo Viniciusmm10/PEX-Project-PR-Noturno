@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card de Resposta</title>
+    <style>
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-left: 200px;
+            margin-right: 200px;
+            width: auto;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .linha {
+            margin-bottom: 10px;
+        }
+
+        .label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="linha">
+            <span class="label">Pergunta:</span>
+            <div id="texto-pergunta">Aqui vai o texto da pergunta.</div>
+        </div>
+        <div class="linha">
+            <span class="label">Sua Resposta:</span>
+            <div id="texto-alternativa-escolhida">Aqui vai a alternativa que você escolheu.</div>
+        </div>
+        <div class="linha">
+            <span class="label">Resposta Certa:</span>
+            <div id="texto-alternativa-certa">Aqui vai a alternativa correta.</div>
+        </div>
+        <div class="linha">
+            <span class="label">Comentário:</span>
+            <div id="texto-comentario">Aqui vai um comentário sobre a resposta certa.</div>
+        </div>
+    </div>
+
+    <script>
+        // Aqui você pode adicionar Javascript para preencher dinamicamente os dados do card
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('texto-pergunta').textContent = "Qual a capital do Brasil?";
+            document.getElementById('texto-alternativa-escolhida').textContent = "Rio de Janeiro";
+            document.getElementById('texto-alternativa-certa').textContent = "Brasília";
+            document.getElementById('texto-comentario').textContent = "A capital do Brasil foi transferida para Brasília em 1960.";
+        });
+    </script>
+
+</body>
+</html>
