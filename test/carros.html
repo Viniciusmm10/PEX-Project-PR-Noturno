@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Carros</title>
+</head>
+<body>
+    <div>
+        <h1>Lista de Carros</h1>
+        <ul id="lista_carros">
+        </ul>
+    </div>
+
+    <script>
+            let carros = [
+        {
+            nome: "Opala",
+            ano_fabricacao: "1971"
+        },
+        {
+            nome: "Chevete",
+            ano_fabricacao: "1970"
+        },
+        {
+            nome: "Ford T",
+            ano_fabricacao: "1908"
+        },
+        {
+            nome: "Fiat 47",
+            ano_fabricacao: "1976"
+        },
+        {
+            nome: "Monza",
+            ano_fabricacao: "1998"
+        }
+    ]
+
+     let lista_carros = document.getElementById("lista_carros")
+
+     let itens_carro = ""
+     for(i = 0; i < carros.length; i++){
+        itens_carro = itens_carro + "<li>" + "Nome: " + carros[i].nome + " Ano: " + carros[i].ano_fabricacao + "</li>"
+     }
+
+     lista_carros.innerHTML = itens_carro
+
+
+    </script>
+    
+</body>
+</html>
