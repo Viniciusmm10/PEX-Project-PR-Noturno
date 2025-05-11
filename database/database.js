@@ -5,7 +5,7 @@ const Sequelize = require("sequelize");
 //     dialect: "mysql"
 // });
 
-const connection = new Sequelize("quiz", "quiz", "as,k71l;", {
+const connection = new Sequelize("quiz", "root", "as,k71l;", {
     host: "localhost",
     dialect: "mysql"
 });

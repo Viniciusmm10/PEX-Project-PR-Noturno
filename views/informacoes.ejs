@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME</title>
+  </head>
+  <body>
+    <%- include('partials/header') %>
+
+    <div class="container">
+      <main id="conteudo-riscos" class="container-relatorio">
+        <h1>Gestão de Riscos</h1>
+        <section>
+          <header>
+            <h2>O que são Riscos?</h2>
+            <div id="introducao">
+              <img id="img-def-riscos" src="img/definicao_riscos.jpg" alt="Definição de riscos">
+              <p>Riscos são eventos ou condições incertas que, se ocorrerem, podem ter um efeito positivo ou negativo nos objetivos. Em outras palavras, risco é a possibilidade de algo acontecer e afetar seus objetivos.</p>
+              <p>A gestão de riscos é um processo fundamental para identificar, analisar, avaliar e controlar esses riscos, buscando minimizar os efeitos negativos e, quando possível, aproveitar os efeitos positivos.</p>
+            </div>
+          </header>
+          <article>
+            <p>De acordo com a ISO 31000:2018, a norma internacional para gestão de riscos, risco é definido como <span id="def-risco-iso">o efeito da incerteza nos objetivos</span>.</p>
+            <h2>Vamos detalhar essa definição:</h2>
+            <p><strong>Efeito: </strong>Significa um desvio do esperado – que pode ser positivo ou negativo. Tradicionalmente, o foco da gestão de riscos era em resultados negativos (ameaças), mas a ISO 31000 reconhece que a incerteza também pode trazer oportunidades com resultados positivos.</p>
+            <p><strong>Incerteza: </strong>Refere-se ao estado de não ter certeza sobre a ocorrência ou o resultado de um evento. Isso inclui eventos que já aconteceram (onde o resultado é desconhecido) e eventos futuros (onde a ocorrência é incerta).</p>
+            <p><strong>Objetivos: </strong>Podem ser de diversas naturezas e em diferentes níveis da organização (estratégicos, organizacionais, de projetos, etc.). O risco sempre estará relacionado com a possibilidade de afetar a conquista desses objetivos.</p>
+            <p>Em resumo, a ISO 31000 adota uma visão ampla de risco, considerando tanto as ameaças quanto as oportunidades que a incerteza pode trazer para a realização dos objetivos de uma organização. A norma enfatiza que a gestão de riscos deve ser integrada a todas as atividades da organização e ser parte da tomada de decisão.</p>
+
+          </article>
+          <hr>
+          <article>
+            <h2>Principais etapas do processo de gestão de riscos segundo a ISO 31000</h2>
+            <p>A ISO 31000:2018 descreve o processo de gestão de riscos como um ciclo iterativo composto pelas seguintes etapas principais:</p>
+
+            <h3>1. Comunicação e Consulta:</h3>
+            <ul>
+              <li><p>Esta etapa é fundamental e deve ocorrer durante todo o processo de gestão de riscos.</p></li>
+              <li><p>Envolve a troca de informações com as partes interessadas relevantes (internas e externas) sobre os riscos, sua natureza, como são avaliados e como serão tratados.</p></li>
+              <li><p>O objetivo é garantir que diferentes perspectivas sejam consideradas, que as partes interessadas compreendam os riscos e as decisões tomadas, e que haja apoio para o plano de gestão de riscos.</p></li>
+            </ul>
+
+            <h3>2. Estabelecimento do Escopo, Contexto e Critérios:</h3>
+            <ul>
+              <li><p><strong>Estabelecimento do Escopo: </strong>Define o que será incluído no processo de gestão de riscos, considerando os objetivos, decisões a serem tomadas, e o tempo e recursos disponíveis.</p></li>
+              <li><p><strong>Entendimento do Contexto: </strong>Compreende o ambiente interno e externo da organização que pode afetar seus objetivos e a forma como os riscos são gerenciados. O contexto interno inclui cultura, estrutura organizacional, governança, capacidades, etc. O contexto externo abrange o ambiente legal, tecnológico, social, econômico, competitivo, etc.</p></li>
+              <li><p><strong>Definição dos Critérios de Risco: </strong>Estabelece os termos de referência pelos quais o significado do risco será avaliado. Isso inclui os níveis de probabilidade e impacto, os critérios para determinar quando um risco é aceitável ou precisa de tratamento, e como os riscos serão priorizados.</p></li>
+            </ul>
+
+            <h3>3. Avaliação de Riscos:</h3>
+            <p>Esta etapa envolve a identificação, análise e avaliação dos riscos.</p>
+            <ul>
+              <li><p><strong>Identificação de Riscos: </strong>Processo de encontrar, reconhecer e descrever os riscos que podem afetar a organização e seus objetivos. As fontes de risco, eventos, suas causas potenciais e suas possíveis consequências são considerados.</p></li>
+              <li><p><strong>Análise de Riscos: </strong>Compreende a análise da natureza do risco e a determinação do nível do risco. Isso geralmente envolve a análise da probabilidade de ocorrência do risco e da magnitude de suas consequências. Métodos qualitativos, quantitativos ou uma combinação de ambos podem ser utilizados.</p></li>
+              <li><p><strong>Avaliação de Riscos: </strong>Processo de comparar os resultados da análise de riscos com os critérios de risco estabelecidos para determinar onde uma ação adicional é necessária. Ajuda a tomar decisões sobre quais riscos precisam ser tratados e a prioridade desses tratamentos.</p></li>
+            </ul>
+
+            <h3>4. Tratamento de Riscos:</h3>
+            <p>Esta etapa envolve a seleção e implementação de opções para abordar os riscos avaliados.</p>
+            <p>As opções de tratamento podem incluir:</p>
+            <ul>
+              <li><p><strong>Evitar o risco: </strong>Decidir não iniciar ou continuar a atividade que gera o risco.</p></li>
+              <li><p><strong>Aceitar o risco: </strong>Manter o risco e suas potenciais consequências.</p></li>
+              <li><p><strong>Modificar a probabilidade: </strong>Tomar medidas para reduzir a chance de o risco ocorrer.</p></li>
+              <li><p><strong>Modificar as consequências: </strong>Tomar medidas para reduzir o impacto caso o risco ocorra.</p></li>
+              <li><p><strong>Compartilhar o risco: </strong>Transferir ou compartilhar parte do risco com terceiros (por exemplo, através de seguros ou parcerias).</p></li>
+              <li><p><strong>Reter o risco: </strong>Assumir as perdas residuais.</p></li>
+            </ul>
+            <p>O plano de tratamento de riscos deve definir as ações específicas a serem tomadas, as responsabilidades, os prazos e os recursos necessários.</p>
+
+            <h3>5. Monitoramento e Análise Crítica:</h3>
+            <ul>
+              <li><p>Esta etapa envolve o acompanhamento regular e a revisão do processo de gestão de riscos, dos riscos em si e da eficácia dos tratamentos implementados.</p></li>
+              <li><p>O monitoramento contínuo garante que as suposições sobre os riscos permaneçam válidas, que os tratamentos sejam eficazes e que novos riscos ou mudanças nos riscos existentes sejam identificados e avaliados.</p></li>
+              <li><p>A análise crítica periódica permite avaliar a adequação, suficiência e eficácia do framework e do processo de gestão de riscos, promovendo a melhoria contínua.</p></li>
+            </ul>
+
+            <h3>6. Registro e Relatório:</h3>
+            <ul>
+              <li><p>Esta etapa envolve a manutenção de informações documentadas sobre o processo de gestão de riscos, os riscos identificados, as análises realizadas, as avaliações, os planos de tratamento e os resultados do monitoramento e análise crítica.</p></li>
+              <li><p>A comunicação e o relatório das atividades e resultados da gestão de riscos devem ser apropriados e oportunos para as partes interessadas relevantes, auxiliando na tomada de decisão e na prestação de contas.</p></li>
+            </ul>
+
+            <p>É importante ressaltar que, embora apresentadas como etapas sequenciais, na prática, a gestão de riscos é um processo iterativo e dinâmico. As etapas podem se sobrepor, ser repetidas e ajustadas conforme novas informações se tornam disponíveis ou o contexto muda. A integração da gestão de riscos em todos os níveis da organização é um princípio fundamental da ISO 31000.</p>
+
+            <div id="img-etapas-gestao-riscos">
+              <img src="img/Figura-1-Processo-de-Gestao-de-Riscos.png" alt="Etapas da Gestão de Riscos">
+            </div> 
+          </article>
+        </section>
+
+        <hr>
+
+        <section>
+          <header>
+            <h2>Outras abordagens sobre Gestão de Riscos além da ISO 31000</h2>
+          </header>
+          <article>
+            <p>A ISO 31000 é uma norma genérica que fornece princípios e diretrizes para a gestão de riscos, podendo ser adaptada a qualquer tipo de organização. Existem outras abordagens e frameworks de gestão de riscos que podem ser utilizados em diferentes contextos e setores. Algumas delas incluem:</p>
+
+            <h3>Frameworks Amplos e Empresariais:</h3>
+            <p><strong>COSO ERM (Enterprise Risk Management): </strong>Desenvolvido pelo Committee of Sponsoring Organizations of the Treadway Commission, este framework integra a gestão de riscos com a estratégia e o desempenho da organização. Ele fornece um modelo com componentes inter-relacionados, como ambiente de controle, avaliação de riscos, atividades de controle, informação e comunicação, e atividades de monitoramento. É amplamente utilizado, especialmente em governança e finanças.</p>
+            <p><strong>PMBOK (Project Management Body of Knowledge): </strong>Embora focado em gerenciamento de projetos, o PMBOK possui uma área de conhecimento dedicada à gestão de riscos em projetos. Ele descreve processos como planejamento do gerenciamento dos riscos, identificação dos riscos, análise qualitativa e quantitativa dos riscos, planejamento das respostas aos riscos, implementação das respostas aos riscos e monitoramento dos riscos.</p>
+
+            <h3>Frameworks e Abordagens Setoriais ou Específicas:</h3>
+            <p><strong>NIST RMF (Risk Management Framework): </strong>Desenvolvido pelo National Institute of Standards and Technology, este framework é amplamente utilizado nos Estados Unidos, principalmente por agências governamentais, para gerenciar riscos de segurança da informação e privacidade. Ele consiste em um ciclo de vida de seis etapas: Categorizar, Selecionar, Implementar, Avaliar, Autorizar e Monitorar.</p>
+            <p><strong>COBIT (Control Objectives for Information and related Technology): </strong>Criado pela ISACA, este framework é focado na governança e gestão de TI. Ele fornece um conjunto de objetivos de controle e boas práticas para garantir que a TI esteja alinhada com os objetivos de negócios, entregando valor e gerenciando riscos.</p>
+            <p><strong>OCTAVE (Operationally Critical Threat, Asset, and Vulnerability Evaluation): </strong>Desenvolvido pelo Software Engineering Institute da Carnegie Mellon University, o OCTAVE é uma abordagem para avaliar e gerenciar riscos de segurança da informação, com foco nos ativos críticos da organização e nas ameaças a esses ativos.</p>
+            <p><strong>FAIR (Factor Analysis of Information Risk): </strong>Esta é uma metodologia quantitativa para analisar e medir o risco de segurança da informação em termos financeiros. Ela busca fornecer uma compreensão mais precisa da probabilidade e do impacto financeiro dos riscos.</p>
+            <p><strong>ITIL (Information Technology Infrastructure Library): </strong>Embora não seja um framework de gestão de riscos dedicado, o ITIL, com seu foco em gerenciamento de serviços de TI, incorpora práticas de gerenciamento de riscos em seus diversos processos, como gerenciamento de incidentes, gerenciamento de problemas e gerenciamento de mudanças.</p>
+            <p><strong>TARA (Threat Assessment for Remediation Analysis): </strong>Utilizado principalmente na indústria automotiva, o TARA é um framework para identificar e analisar ameaças e vulnerabilidades de segurança em veículos conectados e sistemas embarcados.</p>
+
+            <h3>Outras Abordagens:</h3>
+            <p><strong>Análise de Cenários: </strong>Envolve a criação de diferentes cenários futuros possíveis e a avaliação dos riscos e oportunidades associados a cada um deles.</p>
+            <p><strong>Simulação (por exemplo, Monte Carlo): </strong>Utiliza modelos estatísticos para simular a probabilidade e o impacto de diferentes resultados de risco.</p>
+            <p><strong>Brainstorming e Checklists: </strong>Técnicas simples para identificar riscos em grupo, utilizando a experiência e o conhecimento de diversas partes interessadas.</p>
+            <p><strong>Análise Causa-Raiz: </strong>Busca identificar as causas fundamentais de um risco ou evento, em vez de apenas os sintomas.</p>
+            <p><strong>FMEA (Failure Mode and Effects Analysis): </strong>Uma técnica sistemática para identificar potenciais falhas em um processo, produto ou sistema e avaliar seus efeitos.</p>
+            <p><strong>HAZOP (Hazard and Operability Study): </strong>Uma técnica estruturada para identificar perigos potenciais e problemas operacionais em processos complexos.</p>
+
+            <h3>Conclusão</h3>
+            <p>A escolha da abordagem ou framework mais adequada dependerá das necessidades específicas da organização, do seu setor de atuação, da natureza dos seus riscos e dos seus objetivos. Muitas organizações também optam por combinar elementos de diferentes abordagens para criar um sistema de gestão de riscos mais robusto e adaptado às suas particularidades.</p>
+
+          </article>
+
+        </section>
+      </main>
+    </div>
+
+    <%- include('partials/footer') %>
+  </body>
+</html>

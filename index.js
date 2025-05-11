@@ -25,12 +25,17 @@ app.use(
 
 //Rotas
 
-app.get("/", async (req, res) => {
-
-    res.render("visitante");
-
+app.get("/", (req, res) => {
+    res.render("home");
 });
 
+app.post("/visitante", (req, res) => {
+    res.render("visitante");
+});
+
+app.get("/informacoes", (req, res) => {
+    res.render("informacoes");
+});
 
 app.post("/salvarvisitante", async (req, res) => {
 
@@ -100,7 +105,7 @@ app.post("/salvarrespostas", async (req, res) => {
     let erros = []
 
     if(Object.keys(req.body).length < 11){
-        erros.push({texto: "Número de respostas inferior ao número de perguntas."})
+        erros.push({texto: "Responda todas as questões antes de enviar sua resposta."})
 
         req.session.erros = erros
         res.redirect("quiz")
