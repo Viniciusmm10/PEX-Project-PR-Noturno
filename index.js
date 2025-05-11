@@ -37,6 +37,10 @@ app.get("/informacoes", (req, res) => {
     res.render("informacoes");
 });
 
+app.get("/sobre", (req, res) => {
+    res.render("sobre");
+});
+
 app.post("/salvarvisitante", async (req, res) => {
 
     let erros = []
