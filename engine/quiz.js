@@ -1,18 +1,6 @@
 const Sequelize = require("sequelize");
 const connection = require("../database/database");
 
-const Quiz = {
-    Perguntas,
-    Alternativas,
-    Perguntas_Aleatorias,
-    Alternativas_Aleatorias,
-    ResponderPergunta,
-    CriarVisitante,
-    Questionario,
-    Resultado,
-    RelatorioAvaliacao
-}
-
 async function Perguntas(){
 
     const result = await connection.query(
@@ -144,7 +132,7 @@ async function CriarVisitante(visitante){
     await connection.query(`
         INSERT INTO usuarios(
             nome,
-            empresa,
+            setor,
             area,
             cargo,
             email,
@@ -152,7 +140,7 @@ async function CriarVisitante(visitante){
             datacriacao)
         VALUES (
             :nome,
-            :empresa,
+            :setor,
             :area,
             :cargo,
             :email,
@@ -162,7 +150,7 @@ async function CriarVisitante(visitante){
     {
         replacements: {
             nome: visitante.nome,
-            empresa: visitante.empresa,
+            setor: visitante.setor,
             area: visitante.area,
             cargo: visitante.cargo,
             email: visitante.email,
@@ -245,7 +233,32 @@ async function RelatorioAvaliacao(id_usuario){
 }
 
 
+async function ListaItensCampo(id_campo){
 
+    const result = await connection.query(
+        `SELECT
+            l.id_item,
+            l.valor
+        FROM
+            lista_valores l
+        WHERE
+            l.id_campo = '${id_campo}'
+            AND
+	        l.ativo = "S"
+        ORDER BY
+            l.valor`, 
+        { raw: true }
+    )
+
+    // let r = ""
+
+    // result[0].forEach(item => {
+    //     r = r + `<option value="${item.id_item}">${item.valor}</option>`
+    // })
+
+    return result[0]
+
+}
 
 
 
@@ -272,6 +285,22 @@ function idsAleatorios(min, max, qtd){
     while (ids.size !== qtd)
   
     return ids;
+}
+
+
+// Exportação do objeto
+
+const Quiz = {
+    Perguntas,
+    Alternativas,
+    Perguntas_Aleatorias,
+    Alternativas_Aleatorias,
+    ResponderPergunta,
+    CriarVisitante,
+    Questionario,
+    Resultado,
+    RelatorioAvaliacao,
+    ListaItensCampo
 }
 
 

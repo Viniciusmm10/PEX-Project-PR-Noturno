@@ -23,7 +23,7 @@
                     <div class="row">
                         <div class="col">
                             <!-- <label for="" class="input-spacing">Nome</label> -->
-                            <input type="text" class="form-control input-spacing" placeholder="Nome" name="nome">
+                            <input type="text" class="form-control input-spacing" placeholder="Seu nome" name="nome">
                         </div>
                     </div>
 
@@ -32,14 +32,58 @@
                     <div class="row">
                         <div class="col">
                             <!-- <label for="" class="input-spacing">Área</label> -->
-                            <input type="text" class="form-control input-spacing" placeholder="Área" name="area">
+                            <!-- <input type="text" class="form-control input-spacing" placeholder="Área" name="area"> -->
+                            <select class="form-control input-spacing" name="area">
+                                <option selected>Qual sua área na empresa que trabalha?</option>
+                                <!-- <option value="1">Administração/Gestão</option>
+                                <option value="2">Operações/Produção</option>
+                                <option value="3">Comercial/Vendas</option> -->
+
+                                <% 
+                                    if(typeof area !== "undefined"){
+                                    area.forEach(item => { 
+                                %>
+                                    <option value="<%= item.id_item %>"><%= item.valor %></option>
+                                <% })} %>
+                            </select>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col">
                             <!-- <label for="" class="input-spacing">Cargo</label> -->
-                            <input type="text" class="form-control input-spacing" placeholder="Cargo" name="cargo">
+                            <!-- <input type="text" class="form-control input-spacing" placeholder="Cargo" name="cargo"> -->
+                            <select class="form-control input-spacing" name="cargo">
+                                <option selected>Qual o seu cargo?</option>
+                                <!-- <option value="1">Auxiliar (Administrativo, de Produção, de Serviços, etc.)</option>
+                                <option value="2">Assistente (Administrativo, de Marketing, Financeiro, etc.)</option>
+                                <option value="3">Operador (de Máquinas, de Produção, de Telemarketing, etc.)</option> -->
+
+                                <% 
+                                    if(typeof cargo !== "undefined"){
+                                    cargo.forEach(item => { 
+                                %>
+                                    <option value="<%= item.id_item %>"><%= item.valor %></option>
+                                <% })} %>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <select class="form-control input-spacing" name="setor">
+                                <option selected>Em qual setor sua empresa atua?</option>
+                                <!-- <option value="1">Setor Primário</option>
+                                <option value="2">Setor Secundário</option>
+                                <option value="3">Setor Terciário</option> -->
+
+                                <% 
+                                    if(typeof setor !== "undefined"){
+                                    setor.forEach(item => { 
+                                %>
+                                    <option value="<%= item.id_item %>"><%= item.valor %></option>
+                                <% })} %>
+                            </select>
                         </div>
                     </div>
 

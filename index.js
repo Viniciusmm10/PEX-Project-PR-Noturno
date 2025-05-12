@@ -29,8 +29,20 @@ app.get("/", (req, res) => {
     res.render("home");
 });
 
-app.post("/visitante", (req, res) => {
-    res.render("visitante");
+app.post("/visitante", async (req, res) => {
+    let area = await Quiz.ListaItensCampo(1);
+    let cargo = await Quiz.ListaItensCampo(2);
+    let setor = await Quiz.ListaItensCampo(3);
+
+    req.session.area = area
+    req.session.cargo = cargo
+    req.session.setor = setor
+
+    res.render("visitante", {
+        area,
+        cargo,
+        setor
+    });
 });
 
 app.get("/informacoes", (req, res) => {
@@ -45,38 +57,36 @@ app.post("/salvarvisitante", async (req, res) => {
 
     let erros = []
 
+    console.log(req.body)
+
     if(!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null){
         erros.push({texto: "Nome inválido."})
     }
 
-    // if(!req.body.empresa || typeof req.body.empresa == undefined || req.body.empresa == null){
-    //     erros.push({texto: "Empresa inválida."})
-    // }
-
-    if(!req.body.area || typeof req.body.area == undefined || req.body.area == null){
+    if(!req.body.area || typeof req.body.area == undefined || req.body.area == null || req.body.area == "Qual sua área na empresa que trabalha?" ){
         erros.push({texto: "Área inválida."})
     }
 
-    if(!req.body.cargo || typeof req.body.cargo == undefined || req.body.cargo == null){
-        erros.push({texto: "Cargo inválida."})
+    if(!req.body.cargo || typeof req.body.cargo == undefined || req.body.cargo == null || req.body.cargo == "Qual o seu cargo?"){
+        erros.push({texto: "Cargo inválido."})
     }
 
-    // if(!req.body.email || typeof req.body.email == undefined || req.body.email == null){
-    //     erros.push({texto: "E-mail inválido."})
-    // }
+    if(!req.body.setor || typeof req.body.setor == undefined || req.body.setor == null || req.body.setor == "Em qual setor sua empresa atua?"){
+        erros.push({texto: "Setor inválido."})
+    }
 
-    // if(!req.body.telefone || typeof req.body.telefone == undefined || req.body.telefone == null){
-    //     erros.push({texto: "Telefone inválido."})
-    // }
 
     if(erros.length > 0){
         res.render("visitante", {
-            erros: erros
+            erros: erros,
+            area: req.session.area,
+            cargo: req.session.cargo,
+            setor: req.session.setor
         })
     }else{
         const dados_visitante = {
             nome: req.body.nome,
-            empresa: "", //req.body.empresa,
+            setor: req.body.setor,
             area: req.body.area,
             cargo: req.body.cargo,
             email: "", //req.body.email,
