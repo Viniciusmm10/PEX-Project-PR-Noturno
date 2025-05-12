@@ -1,7 +1,7 @@
 -- --------------------------------------------------------
--- Servidor:                     127.0.0.1
--- Versão do servidor:           8.0.41 - MySQL Community Server - GPL
--- OS do Servidor:               Win64
+-- Servidor:                     157.230.80.44
+-- Versão do servidor:           11.4.5-MariaDB-0ubuntu0.24.10.1 - Ubuntu 24.10
+-- OS do Servidor:               debian-linux-gnu
 -- HeidiSQL Versão:              12.10.0.7000
 -- --------------------------------------------------------
 
@@ -16,18 +16,18 @@
 
 
 -- Copiando estrutura do banco de dados para quiz
-CREATE DATABASE IF NOT EXISTS `quiz` /*!40100 DEFAULT CHARACTER SET utf8mb3 */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE IF NOT EXISTS `quiz` /*!40100 DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci */;
 USE `quiz`;
 
 -- Copiando estrutura para tabela quiz.alternativas
 CREATE TABLE IF NOT EXISTS `alternativas` (
-  `idalternativas` int NOT NULL AUTO_INCREMENT,
-  `pergunta_idpergunta` int NOT NULL,
+  `idalternativas` int(11) NOT NULL AUTO_INCREMENT,
+  `pergunta_idpergunta` int(11) NOT NULL,
   `alternativa` varchar(500) NOT NULL,
   PRIMARY KEY (`idalternativas`),
   KEY `fk_alternativas_pergunta1_idx` (`pergunta_idpergunta`),
   CONSTRAINT `fk_alternativas_pergunta1` FOREIGN KEY (`pergunta_idpergunta`) REFERENCES `perguntas` (`idpergunta`)
-) ENGINE=InnoDB AUTO_INCREMENT=801 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=801 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.alternativas: ~800 rows (aproximadamente)
 DELETE FROM `alternativas`;
@@ -833,13 +833,79 @@ INSERT INTO `alternativas` (`idalternativas`, `pergunta_idpergunta`, `alternativ
 	(799, 200, 'Alternativa C da Pergunta 200'),
 	(800, 200, 'Alternativa D da Pergunta 200');
 
+-- Copiando estrutura para tabela quiz.campos
+CREATE TABLE IF NOT EXISTS `campos` (
+  `id_campo` int(11) NOT NULL AUTO_INCREMENT,
+  `nome` varchar(100) NOT NULL,
+  PRIMARY KEY (`id_campo`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+-- Copiando dados para a tabela quiz.campos: ~3 rows (aproximadamente)
+DELETE FROM `campos`;
+INSERT INTO `campos` (`id_campo`, `nome`) VALUES
+	(1, 'Área'),
+	(2, 'Cargo'),
+	(3, 'Setor');
+
+-- Copiando estrutura para tabela quiz.lista_valores
+CREATE TABLE IF NOT EXISTS `lista_valores` (
+  `id_item` int(11) NOT NULL AUTO_INCREMENT,
+  `valor` varchar(500) NOT NULL,
+  `descricao` varchar(500) DEFAULT NULL,
+  `ativo` enum('S','N') NOT NULL DEFAULT 'S',
+  `id_campo` int(11) NOT NULL,
+  PRIMARY KEY (`id_item`),
+  KEY `campo` (`id_campo`),
+  CONSTRAINT `campo` FOREIGN KEY (`id_campo`) REFERENCES `campos` (`id_campo`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+
+-- Copiando dados para a tabela quiz.lista_valores: ~36 rows (aproximadamente)
+DELETE FROM `lista_valores`;
+INSERT INTO `lista_valores` (`id_item`, `valor`, `descricao`, `ativo`, `id_campo`) VALUES
+	(1, 'Administração/Gestão', 'Responsável pela gestão geral da empresa, planejamento estratégico, organização e controle.', 'S', 1),
+	(2, 'Operações/Produção', 'Encarregada da produção de bens ou serviços, controle de qualidade, logística e processos operacionais.', 'S', 1),
+	(3, 'Comercial/Vendas', 'Focada na venda dos produtos ou serviços da empresa, prospecção de clientes, gestão de contas e estratégias de vendas.', 'S', 1),
+	(4, 'Marketing', 'Responsável pela promoção da marca, produtos e serviços, pesquisa de mercado, comunicação e publicidade.', 'S', 1),
+	(5, 'Financeiro', 'Gerencia as finanças da empresa, incluindo fluxo de caixa, contabilidade, investimentos, impostos e análise financeira.', 'S', 1),
+	(6, 'Recursos Humanos (RH)', 'Cuida da gestão de pessoas, recrutamento e seleção, treinamento e desenvolvimento, folha de pagamento, benefícios e relações trabalhistas.', 'S', 1),
+	(7, 'Tecnologia da Informação (TI)', 'Responsável pela infraestrutura tecnológica da empresa, sistemas de informação, segurança de dados e suporte técnico.', 'S', 1),
+	(8, 'Jurídico', 'Lida com questões legais, contratos, propriedade intelectual, litígios e conformidade.', 'S', 1),
+	(9, 'Compras/Suprimentos', 'Responsável pela aquisição de bens e serviços necessários para a operação da empresa.', 'S', 1),
+	(10, 'Logística/Distribuição', 'Encarregada do transporte, armazenamento e entrega de produtos aos clientes.', 'S', 1),
+	(11, 'Pesquisa e Desenvolvimento (P&D)', 'Focada na criação de novos produtos, serviços ou processos, e na inovação.', 'S', 1),
+	(12, 'Atendimento ao Cliente/Suporte', 'Responsável por interagir com os clientes, solucionar dúvidas, reclamações e oferecer suporte.', 'S', 1),
+	(13, 'Comunicação', 'Cuida da comunicação interna e externa da empresa, relações públicas e imagem corporativa.', 'S', 1),
+	(14, 'Qualidade', 'Garante que os produtos e serviços da empresa atendam aos padrões de qualidade estabelecidos.', 'S', 1),
+	(15, 'Segurança do Trabalho', 'Responsável pela segurança e saúde dos colaboradores no ambiente de trabalho.', 'S', 1),
+	(16, 'Meio Ambiente', 'Cuida das questões ambientais relacionadas às operações da empresa e sua sustentabilidade.', 'S', 1),
+	(17, 'Comércio Exterior', 'Para empresas que atuam em mercados internacionais, cuidando de importação e exportação.', 'S', 1),
+	(18, 'Engenharia', 'Em empresas industriais ou de construção, responsável por projetos, manutenção e processos de engenharia.', 'S', 1),
+	(19, 'Saúde e Segurança', 'Em alguns setores, pode haver uma área específica focada na saúde ocupacional dos funcionários.', 'S', 1),
+	(20, 'Auxiliar (Administrativo, de Produção, de Serviços, etc.)', NULL, 'S', 2),
+	(21, 'Assistente (Administrativo, de Marketing, Financeiro, etc.)', NULL, 'S', 2),
+	(22, 'Operador (de Máquinas, de Produção, de Telemarketing, etc.)', NULL, 'S', 2),
+	(23, 'Técnico (em Eletrônica, em Informática, em Manutenção, etc.)', NULL, 'S', 2),
+	(24, 'Supervisor (de Produção, de Vendas, Administrativo, etc.)', NULL, 'S', 2),
+	(25, 'Encarregado (de Setor, de Equipe)', NULL, 'S', 2),
+	(26, 'Analista Júnior/Pleno (Financeiro, de Marketing, de RH, de TI, etc.)', NULL, 'S', 2),
+	(27, 'Coordenador (de Projetos, de Equipe, de Área)', NULL, 'S', 2),
+	(28, 'Especialista (em uma área específica do conhecimento)', NULL, 'S', 2),
+	(29, 'Gerente (de Departamento, de Área, de Projetos)', NULL, 'S', 2),
+	(30, 'Diretor (de Marketing, Financeiro, de Operações, de RH, etc.)', NULL, 'S', 2),
+	(31, 'Vice-Presidente (de uma divisão ou área estratégica)', NULL, 'S', 2),
+	(32, 'Presidente (CEO - Chief Executive Officer)', NULL, 'S', 2),
+	(33, 'Sócio/Proprietário', NULL, 'S', 2),
+	(34, 'Setor Primário', NULL, 'S', 3),
+	(35, 'Setor Secundário', NULL, 'S', 3),
+	(36, 'Setor Terciário', NULL, 'S', 3);
+
 -- Copiando estrutura para tabela quiz.nivel
 CREATE TABLE IF NOT EXISTS `nivel` (
-  `idnivel` int NOT NULL AUTO_INCREMENT,
+  `idnivel` int(11) NOT NULL AUTO_INCREMENT,
   `nivel` varchar(100) NOT NULL,
   `pontuacao` tinyint(1) NOT NULL,
   PRIMARY KEY (`idnivel`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.nivel: ~4 rows (aproximadamente)
 DELETE FROM `nivel`;
@@ -851,13 +917,13 @@ INSERT INTO `nivel` (`idnivel`, `nivel`, `pontuacao`) VALUES
 
 -- Copiando estrutura para tabela quiz.perguntas
 CREATE TABLE IF NOT EXISTS `perguntas` (
-  `idpergunta` int NOT NULL AUTO_INCREMENT,
+  `idpergunta` int(11) NOT NULL AUTO_INCREMENT,
   `pergunta` varchar(500) NOT NULL,
-  `nivel_idnivel` int NOT NULL,
+  `nivel_idnivel` int(11) NOT NULL,
   PRIMARY KEY (`idpergunta`),
   KEY `fk_pergunta_nivel1_idx` (`nivel_idnivel`),
   CONSTRAINT `fk_pergunta_nivel1` FOREIGN KEY (`nivel_idnivel`) REFERENCES `nivel` (`idnivel`)
-) ENGINE=InnoDB AUTO_INCREMENT=201 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=201 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.perguntas: ~200 rows (aproximadamente)
 DELETE FROM `perguntas`;
@@ -1065,9 +1131,9 @@ INSERT INTO `perguntas` (`idpergunta`, `pergunta`, `nivel_idnivel`) VALUES
 
 -- Copiando estrutura para tabela quiz.respostas_usuarios
 CREATE TABLE IF NOT EXISTS `respostas_usuarios` (
-  `usuarios_idusuario` int NOT NULL,
-  `pergunta_idpergunta` int NOT NULL,
-  `alternativas_idalternativas` int NOT NULL,
+  `usuarios_idusuario` int(11) NOT NULL,
+  `pergunta_idpergunta` int(11) NOT NULL,
+  `alternativas_idalternativas` int(11) NOT NULL,
   `datahora_resposta` datetime NOT NULL,
   KEY `fk_respostas_usuarios_pergunta1_idx` (`pergunta_idpergunta`),
   KEY `fk_respostas_usuarios_usuarios1_idx` (`usuarios_idusuario`),
@@ -1075,9 +1141,9 @@ CREATE TABLE IF NOT EXISTS `respostas_usuarios` (
   CONSTRAINT `fk_respostas_usuarios_alternativas1` FOREIGN KEY (`alternativas_idalternativas`) REFERENCES `alternativas` (`idalternativas`),
   CONSTRAINT `fk_respostas_usuarios_pergunta1` FOREIGN KEY (`pergunta_idpergunta`) REFERENCES `perguntas` (`idpergunta`),
   CONSTRAINT `fk_respostas_usuarios_usuarios1` FOREIGN KEY (`usuarios_idusuario`) REFERENCES `usuarios` (`idusuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Copiando dados para a tabela quiz.respostas_usuarios: ~15 rows (aproximadamente)
+-- Copiando dados para a tabela quiz.respostas_usuarios: ~36 rows (aproximadamente)
 DELETE FROM `respostas_usuarios`;
 INSERT INTO `respostas_usuarios` (`usuarios_idusuario`, `pergunta_idpergunta`, `alternativas_idalternativas`, `datahora_resposta`) VALUES
 	(1, 1, 3, '2025-03-09 13:00:00'),
@@ -1095,18 +1161,38 @@ INSERT INTO `respostas_usuarios` (`usuarios_idusuario`, `pergunta_idpergunta`, `
 	(1, 2, 1, '2025-03-09 23:14:48'),
 	(1, 2, 1, '2025-03-09 23:22:34'),
 	(1, 2, 1, '2025-03-09 23:23:26'),
-	(1, 2, 1, '2025-03-11 18:05:01');
+	(1, 2, 1, '2025-03-11 18:05:01'),
+	(3, 4, 15, '2025-05-11 22:19:52'),
+	(3, 12, 45, '2025-05-11 22:19:52'),
+	(3, 16, 64, '2025-05-11 22:19:52'),
+	(3, 26, 103, '2025-05-11 22:19:52'),
+	(3, 32, 128, '2025-05-11 22:19:52'),
+	(3, 35, 138, '2025-05-11 22:19:52'),
+	(3, 38, 150, '2025-05-11 22:19:52'),
+	(3, 39, 153, '2025-05-11 22:19:52'),
+	(3, 40, 157, '2025-05-11 22:19:52'),
+	(3, 45, 177, '2025-05-11 22:19:52'),
+	(5, 4, 13, '2025-05-11 23:01:56'),
+	(5, 20, 77, '2025-05-11 23:01:56'),
+	(5, 34, 135, '2025-05-11 23:01:56'),
+	(5, 44, 174, '2025-05-11 23:01:56'),
+	(5, 48, 190, '2025-05-11 23:01:56'),
+	(5, 57, 228, '2025-05-11 23:01:56'),
+	(5, 65, 260, '2025-05-11 23:01:56'),
+	(5, 79, 313, '2025-05-11 23:01:56'),
+	(5, 92, 368, '2025-05-11 23:01:56'),
+	(5, 101, 403, '2025-05-11 23:01:56');
 
 -- Copiando estrutura para tabela quiz.resposta_certa
 CREATE TABLE IF NOT EXISTS `resposta_certa` (
-  `pergunta_idpergunta` int NOT NULL,
-  `alternativas_idalternativas` int NOT NULL,
+  `pergunta_idpergunta` int(11) NOT NULL,
+  `alternativas_idalternativas` int(11) NOT NULL,
   `comentario` varchar(500) NOT NULL,
   PRIMARY KEY (`pergunta_idpergunta`,`alternativas_idalternativas`),
   KEY `fk_resposta_certa_alternativas1_idx` (`alternativas_idalternativas`),
   CONSTRAINT `fk_resposta_certa_alternativas1` FOREIGN KEY (`alternativas_idalternativas`) REFERENCES `alternativas` (`idalternativas`),
   CONSTRAINT `fk_resposta_certa_pergunta1` FOREIGN KEY (`pergunta_idpergunta`) REFERENCES `perguntas` (`idpergunta`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.resposta_certa: ~104 rows (aproximadamente)
 DELETE FROM `resposta_certa`;
@@ -1218,21 +1304,30 @@ INSERT INTO `resposta_certa` (`pergunta_idpergunta`, `alternativas_idalternativa
 
 -- Copiando estrutura para tabela quiz.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
-  `idusuario` int NOT NULL AUTO_INCREMENT,
+  `idusuario` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
-  `empresa` varchar(100) NOT NULL,
-  `area` varchar(100) NOT NULL,
-  `cargo` varchar(100) DEFAULT NULL,
+  `setor` int(11) NOT NULL,
+  `area` int(11) NOT NULL,
+  `cargo` int(11) NOT NULL,
   `email` varchar(100) DEFAULT NULL,
   `telefone` varchar(100) DEFAULT NULL,
   `datacriacao` datetime NOT NULL,
-  PRIMARY KEY (`idusuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3;
+  PRIMARY KEY (`idusuario`),
+  KEY `area` (`area`),
+  KEY `cargo` (`cargo`),
+  KEY `setor` (`setor`),
+  CONSTRAINT `area` FOREIGN KEY (`area`) REFERENCES `lista_valores` (`id_item`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `cargo` FOREIGN KEY (`cargo`) REFERENCES `lista_valores` (`id_item`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `setor` FOREIGN KEY (`setor`) REFERENCES `lista_valores` (`id_item`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Copiando dados para a tabela quiz.usuarios: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela quiz.usuarios: ~4 rows (aproximadamente)
 DELETE FROM `usuarios`;
-INSERT INTO `usuarios` (`idusuario`, `nome`, `empresa`, `area`, `cargo`, `email`, `telefone`, `datacriacao`) VALUES
-	(1, 'Samuel Fernandes', 'Evolutiva Soluções', 'Diretoria', 'Diretor', 'teste@teste.com', '(11)98765-4321', '2025-03-12 00:00:00');
+INSERT INTO `usuarios` (`idusuario`, `nome`, `setor`, `area`, `cargo`, `email`, `telefone`, `datacriacao`) VALUES
+	(2, 'Teste', 36, 1, 28, '', '', '2025-05-11 22:15:54'),
+	(3, 'Teste 2', 34, 10, 31, '', '', '2025-05-11 22:19:31'),
+	(4, 'Teste 3', 35, 7, 27, '', '', '2025-05-11 22:51:22'),
+	(5, 'Teste 4', 34, 2, 25, '', '', '2025-05-11 23:01:37');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
