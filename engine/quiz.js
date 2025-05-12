@@ -223,8 +223,8 @@ async function RelatorioAvaliacao(id_usuario){
             INNER JOIN perguntas p ON r.pergunta_idpergunta = p.idpergunta
             INNER JOIN alternativas a ON r.alternativas_idalternativas = a.idalternativas
             INNER JOIN resposta_certa c ON r.pergunta_idpergunta = c.pergunta_idpergunta
-            WHERE r.usuarios_idusuario = ${id_usuario}) AS z
-        INNER JOIN alternativas x ON z.alternativas_idalternativas = x.idalternativas`, 
+            WHERE r.usuarios_idusuario = '${id_usuario}') AS z
+        INNER JOIN alternativas x ON z.alternativas_idalternativas = x.idalternativas;`, 
         { raw: true }
     )
 
