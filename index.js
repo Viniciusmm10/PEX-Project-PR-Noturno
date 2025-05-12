@@ -57,7 +57,7 @@ app.post("/salvarvisitante", async (req, res) => {
 
     let erros = []
 
-    console.log(req.body)
+    // console.log(req.body)
 
     if(!req.body.nome || typeof req.body.nome == undefined || req.body.nome == null){
         erros.push({texto: "Nome inválido."})
@@ -100,7 +100,7 @@ app.post("/salvarvisitante", async (req, res) => {
 })
 
 app.get("/quiz", async (req, res) => {
-    const questionario = await Quiz.Questionario(1, 50, 10);
+    const questionario = await Quiz.Questionario(1, 100, 10);
     
     res.render("quiz", {
         title: "Quiz - Projeto PEX",
