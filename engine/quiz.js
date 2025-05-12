@@ -8,7 +8,9 @@ async function Perguntas(){
             p.idpergunta,
             p.pergunta
         FROM 
-            quiz.perguntas AS p;`, 
+            quiz.perguntas AS p
+        WHERE
+            p.idpergunta <= 104;`,
         { raw: true }
     )
 
