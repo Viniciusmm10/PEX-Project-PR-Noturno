@@ -8,13 +8,16 @@
   <body>
     <%- include('partials/header') %>
 
-    <section class="hero">
-      <div class="container float-left pt-5">
-        <h3 class="mt-2">QUIZ GESTÃO DE RISCOS</h3>
-        <p class="lead">Lorem Ipsum</p>
-        <a href="#" class="btn btn-primary btn-lg btn-quiz">Começar Quiz</a>
-      </div>
-    </section>
+    <form method="post" action="/visitante">
+      <section class="hero">
+        <div class="container float-left pt-5">
+          <h3 class="mt-2">Quiz Gestão de Riscos</h3>
+          <p class="lead">Teste seus conhecimentos sobre Riscos</p>
+          <!-- <a href="/visitante" class="btn btn-primary btn-lg btn-quiz">Começar Quiz</a> -->
+          <button class="btn btn-primary btn-lg btn-quiz">Começar Quiz</button>
+        </div>
+      </section>
+    </form>
 
     <%- include('partials/footer') %>
   </body>
