@@ -243,7 +243,7 @@ async function ListaItensCampo(id_campo){
             AND
 	        l.ativo = "S"
         ORDER BY
-            l.valor`, 
+            l.valor;`, 
         { raw: true }
     )
 
