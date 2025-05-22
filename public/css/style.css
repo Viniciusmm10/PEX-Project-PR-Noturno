@@ -190,6 +190,11 @@ footer {
   font-size: 18px;
   /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
   margin-bottom: 100px;
+  /* text-align: justify;
+  overflow-wrap: break-word; */
+  hyphens: auto;
+  /* word-break: break-all; */
+  word-break: break-word;
 }
 
 #img-def-riscos{

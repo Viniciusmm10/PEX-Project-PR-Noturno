@@ -26,7 +26,7 @@ app.use(
 //Rotas
 
 app.get("/", (req, res) => {
-    res.render("home");
+    res.render("informacoes");
 });
 
 app.post("/visitante", async (req, res) => {
@@ -45,8 +45,8 @@ app.post("/visitante", async (req, res) => {
     });
 });
 
-app.get("/informacoes", (req, res) => {
-    res.render("informacoes");
+app.get("/home", (req, res) => {
+    res.render("home");
 });
 
 app.get("/sobre", (req, res) => {
