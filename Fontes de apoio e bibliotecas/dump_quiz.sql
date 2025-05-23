@@ -1,6 +1,6 @@
 -- --------------------------------------------------------
--- Servidor:                     157.230.80.44
--- Versão do servidor:           11.4.5-MariaDB-0ubuntu0.24.10.1 - Ubuntu 24.10
+-- Servidor:                     159.223.186.117
+-- Versão do servidor:           10.11.11-MariaDB-0ubuntu0.24.04.2 - Ubuntu 24.04
 -- OS do Servidor:               debian-linux-gnu
 -- HeidiSQL Versão:              12.10.0.7000
 -- --------------------------------------------------------
@@ -16,10 +16,12 @@
 
 
 -- Copiando estrutura do banco de dados para quiz
+DROP DATABASE IF EXISTS `quiz`;
 CREATE DATABASE IF NOT EXISTS `quiz` /*!40100 DEFAULT CHARACTER SET utf8mb3 COLLATE utf8mb3_general_ci */;
 USE `quiz`;
 
 -- Copiando estrutura para tabela quiz.alternativas
+DROP TABLE IF EXISTS `alternativas`;
 CREATE TABLE IF NOT EXISTS `alternativas` (
   `idalternativas` int(11) NOT NULL AUTO_INCREMENT,
   `pergunta_idpergunta` int(11) NOT NULL,
@@ -30,7 +32,6 @@ CREATE TABLE IF NOT EXISTS `alternativas` (
 ) ENGINE=InnoDB AUTO_INCREMENT=801 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.alternativas: ~800 rows (aproximadamente)
-DELETE FROM `alternativas`;
 INSERT INTO `alternativas` (`idalternativas`, `pergunta_idpergunta`, `alternativa`) VALUES
 	(1, 1, 'Uma certeza de que algo dará errado.'),
 	(2, 1, 'Um evento incerto que pode ter um impacto positivo ou negativo no projeto.'),
@@ -834,6 +835,7 @@ INSERT INTO `alternativas` (`idalternativas`, `pergunta_idpergunta`, `alternativ
 	(800, 200, 'Alternativa D da Pergunta 200');
 
 -- Copiando estrutura para tabela quiz.campos
+DROP TABLE IF EXISTS `campos`;
 CREATE TABLE IF NOT EXISTS `campos` (
   `id_campo` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
@@ -841,26 +843,26 @@ CREATE TABLE IF NOT EXISTS `campos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.campos: ~3 rows (aproximadamente)
-DELETE FROM `campos`;
 INSERT INTO `campos` (`id_campo`, `nome`) VALUES
 	(1, 'Área'),
 	(2, 'Cargo'),
 	(3, 'Setor');
 
 -- Copiando estrutura para tabela quiz.lista_valores
+DROP TABLE IF EXISTS `lista_valores`;
 CREATE TABLE IF NOT EXISTS `lista_valores` (
   `id_item` int(11) NOT NULL AUTO_INCREMENT,
   `valor` varchar(500) NOT NULL,
-  `descricao` varchar(500) DEFAULT NULL,
+  `descricao` varchar(1000) DEFAULT NULL,
   `ativo` enum('S','N') NOT NULL DEFAULT 'S',
   `id_campo` int(11) NOT NULL,
   PRIMARY KEY (`id_item`),
+  UNIQUE KEY `lista_valores_valor_IDX` (`valor`,`id_campo`) USING BTREE,
   KEY `campo` (`id_campo`),
   CONSTRAINT `campo` FOREIGN KEY (`id_campo`) REFERENCES `campos` (`id_campo`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=90 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Copiando dados para a tabela quiz.lista_valores: ~36 rows (aproximadamente)
-DELETE FROM `lista_valores`;
+-- Copiando dados para a tabela quiz.lista_valores: ~88 rows (aproximadamente)
 INSERT INTO `lista_valores` (`id_item`, `valor`, `descricao`, `ativo`, `id_campo`) VALUES
 	(1, 'Administração/Gestão', 'Responsável pela gestão geral da empresa, planejamento estratégico, organização e controle.', 'S', 1),
 	(2, 'Operações/Produção', 'Encarregada da produção de bens ou serviços, controle de qualidade, logística e processos operacionais.', 'S', 1),
@@ -881,25 +883,78 @@ INSERT INTO `lista_valores` (`id_item`, `valor`, `descricao`, `ativo`, `id_campo
 	(17, 'Comércio Exterior', 'Para empresas que atuam em mercados internacionais, cuidando de importação e exportação.', 'S', 1),
 	(18, 'Engenharia', 'Em empresas industriais ou de construção, responsável por projetos, manutenção e processos de engenharia.', 'S', 1),
 	(19, 'Saúde e Segurança', 'Em alguns setores, pode haver uma área específica focada na saúde ocupacional dos funcionários.', 'S', 1),
-	(20, 'Auxiliar (Administrativo, de Produção, de Serviços, etc.)', NULL, 'S', 2),
-	(21, 'Assistente (Administrativo, de Marketing, Financeiro, etc.)', NULL, 'S', 2),
-	(22, 'Operador (de Máquinas, de Produção, de Telemarketing, etc.)', NULL, 'S', 2),
-	(23, 'Técnico (em Eletrônica, em Informática, em Manutenção, etc.)', NULL, 'S', 2),
-	(24, 'Supervisor (de Produção, de Vendas, Administrativo, etc.)', NULL, 'S', 2),
-	(25, 'Encarregado (de Setor, de Equipe)', NULL, 'S', 2),
-	(26, 'Analista Júnior/Pleno (Financeiro, de Marketing, de RH, de TI, etc.)', NULL, 'S', 2),
-	(27, 'Coordenador (de Projetos, de Equipe, de Área)', NULL, 'S', 2),
-	(28, 'Especialista (em uma área específica do conhecimento)', NULL, 'S', 2),
-	(29, 'Gerente (de Departamento, de Área, de Projetos)', NULL, 'S', 2),
-	(30, 'Diretor (de Marketing, Financeiro, de Operações, de RH, etc.)', NULL, 'S', 2),
-	(31, 'Vice-Presidente (de uma divisão ou área estratégica)', NULL, 'S', 2),
-	(32, 'Presidente (CEO - Chief Executive Officer)', NULL, 'S', 2),
-	(33, 'Sócio/Proprietário', NULL, 'S', 2),
-	(34, 'Setor Primário', NULL, 'S', 3),
-	(35, 'Setor Secundário', NULL, 'S', 3),
-	(36, 'Setor Terciário', NULL, 'S', 3);
+	(20, 'Auxiliar (Administrativo, de Produção, de Serviços, etc.)', NULL, 'N', 2),
+	(21, 'Assistente (Administrativo, de Marketing, Financeiro, etc.)', NULL, 'N', 2),
+	(22, 'Operador (de Máquinas, de Produção, de Telemarketing, etc.)', NULL, 'N', 2),
+	(23, 'Técnico (em Eletrônica, em Informática, em Manutenção, etc.)', NULL, 'N', 2),
+	(24, 'Supervisor (de Produção, de Vendas, Administrativo, etc.)', NULL, 'N', 2),
+	(25, 'Encarregado (de Setor, de Equipe)', NULL, 'N', 2),
+	(26, 'Analista Júnior/Pleno (Financeiro, de Marketing, de RH, de TI, etc.)', NULL, 'N', 2),
+	(27, 'Coordenador (de Projetos, de Equipe, de Área)', NULL, 'N', 2),
+	(28, 'Especialista (em uma área específica do conhecimento)', NULL, 'N', 2),
+	(29, 'Gerente (de Departamento, de Área, de Projetos)', NULL, 'N', 2),
+	(30, 'Diretor (de Marketing, Financeiro, de Operações, de RH, etc.)', NULL, 'N', 2),
+	(31, 'Vice-Presidente (de uma divisão ou área estratégica)', NULL, 'N', 2),
+	(32, 'Presidente (CEO - Chief Executive Officer)', NULL, 'N', 2),
+	(33, 'Sócio/Proprietário', NULL, 'N', 2),
+	(34, 'Setor Primário (Agricultura, Pecuária, Extração Mineral, Pesca e Aqüicultura e Exploração Florestal)', NULL, 'S', 3),
+	(35, 'Setor Secundário (Indústria)', NULL, 'S', 3),
+	(36, 'Setor Terciário (Serviços e Comércio)', NULL, 'S', 3),
+	(37, 'Gerente Geral', NULL, 'S', 2),
+	(38, 'Presidente', NULL, 'S', 2),
+	(39, 'Diretor', NULL, 'S', 2),
+	(41, 'Gerente de Departamento', NULL, 'S', 2),
+	(42, 'Coordenador', NULL, 'S', 2),
+	(43, 'Supervisor', NULL, 'S', 2),
+	(44, 'Líder de Equipe', NULL, 'S', 2),
+	(45, 'Analista de Recursos Humanos', NULL, 'S', 2),
+	(46, 'Especialista em Recrutamento e Seleção', NULL, 'S', 2),
+	(47, 'Analista de Treinamento e Desenvolvimento', NULL, 'S', 2),
+	(48, 'Analista de Cargos e Salários', NULL, 'S', 2),
+	(49, 'Business Partner de RH', NULL, 'S', 2),
+	(50, 'Analista Financeiro', NULL, 'S', 2),
+	(51, 'Controller', NULL, 'S', 2),
+	(52, 'Tesoureiro', NULL, 'S', 2),
+	(53, 'Contador', NULL, 'S', 2),
+	(54, 'Auditor Interno', NULL, 'S', 2),
+	(55, 'Analista de Contas a Pagar/Receber', NULL, 'S', 2),
+	(56, 'Analista de Marketing', NULL, 'S', 2),
+	(57, 'Especialista em Marketing Digital', NULL, 'S', 2),
+	(58, 'Gerente de Contas (Key Account Manager)', NULL, 'S', 2),
+	(59, 'Representante de Vendas / Vendedor', NULL, 'S', 2),
+	(60, 'Analista de Inteligência de Mercado', NULL, 'S', 2),
+	(61, 'Social Media Manager', NULL, 'S', 2),
+	(62, 'Designer Gráfico', NULL, 'S', 2),
+	(63, 'Desenvolvedor de Software / Programador', NULL, 'S', 2),
+	(64, 'Engenheiro de Software', NULL, 'S', 2),
+	(65, 'Analista de Sistemas', NULL, 'S', 2),
+	(66, 'Administrador de Redes', NULL, 'S', 2),
+	(67, 'Administrador de Banco de Dados (DBA)', NULL, 'S', 2),
+	(68, 'Analista de Suporte Técnico', NULL, 'S', 2),
+	(69, 'Analista de Segurança da Informação', NULL, 'S', 2),
+	(70, 'Cientista de Dados', NULL, 'S', 2),
+	(71, 'Analista de Logística', NULL, 'S', 2),
+	(72, 'Engenheiro de Produção', NULL, 'S', 2),
+	(73, 'Técnico de Manutenção', NULL, 'S', 2),
+	(74, 'Analista da Cadeia de Suprimentos (Supply Chain)', NULL, 'S', 2),
+	(75, 'Planejador de Produção', NULL, 'S', 2),
+	(76, 'Assistente Administrativo', NULL, 'S', 2),
+	(77, 'Secretário(a) Executivo(a)', NULL, 'S', 2),
+	(78, 'Recepcionista', NULL, 'S', 2),
+	(79, 'Auxiliar de Escritório', NULL, 'S', 2),
+	(80, 'Advogado Corporativo / Advogado Interno', NULL, 'S', 2),
+	(81, 'Analista Jurídico', NULL, 'S', 2),
+	(82, 'Assistente Jurídico', NULL, 'S', 2),
+	(83, 'Analista de Atendimento ao Cliente', NULL, 'S', 2),
+	(84, 'Agente de Atendimento / Operador de Telemarketing', NULL, 'S', 2),
+	(85, 'Especialista em Sucesso do Cliente (Customer Success)', NULL, 'S', 2),
+	(86, 'Estagiário', NULL, 'S', 2),
+	(87, 'Aprendiz', NULL, 'S', 2),
+	(88, 'Auxiliar (ex: Auxiliar de Produção, Auxiliar de Limpeza)', NULL, 'S', 2),
+	(89, 'Assistente (ex: Assistente de Marketing, Assistente Financeiro)', NULL, 'S', 2);
 
 -- Copiando estrutura para tabela quiz.nivel
+DROP TABLE IF EXISTS `nivel`;
 CREATE TABLE IF NOT EXISTS `nivel` (
   `idnivel` int(11) NOT NULL AUTO_INCREMENT,
   `nivel` varchar(100) NOT NULL,
@@ -908,7 +963,6 @@ CREATE TABLE IF NOT EXISTS `nivel` (
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.nivel: ~4 rows (aproximadamente)
-DELETE FROM `nivel`;
 INSERT INTO `nivel` (`idnivel`, `nivel`, `pontuacao`) VALUES
 	(1, 'Fácil', 1),
 	(2, 'Médio', 2),
@@ -916,6 +970,7 @@ INSERT INTO `nivel` (`idnivel`, `nivel`, `pontuacao`) VALUES
 	(4, 'Avançado', 4);
 
 -- Copiando estrutura para tabela quiz.perguntas
+DROP TABLE IF EXISTS `perguntas`;
 CREATE TABLE IF NOT EXISTS `perguntas` (
   `idpergunta` int(11) NOT NULL AUTO_INCREMENT,
   `pergunta` varchar(500) NOT NULL,
@@ -926,7 +981,6 @@ CREATE TABLE IF NOT EXISTS `perguntas` (
 ) ENGINE=InnoDB AUTO_INCREMENT=201 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.perguntas: ~200 rows (aproximadamente)
-DELETE FROM `perguntas`;
 INSERT INTO `perguntas` (`idpergunta`, `pergunta`, `nivel_idnivel`) VALUES
 	(1, 'O que é um risco no contexto da gestão de projetos?', 1),
 	(2, 'Qual das seguintes opções NÃO é uma etapa do processo de gestão de riscos?', 1),
@@ -1130,6 +1184,7 @@ INSERT INTO `perguntas` (`idpergunta`, `pergunta`, `nivel_idnivel`) VALUES
 	(200, 'Pergunta 200', 4);
 
 -- Copiando estrutura para tabela quiz.respostas_usuarios
+DROP TABLE IF EXISTS `respostas_usuarios`;
 CREATE TABLE IF NOT EXISTS `respostas_usuarios` (
   `usuarios_idusuario` int(11) NOT NULL,
   `pergunta_idpergunta` int(11) NOT NULL,
@@ -1143,8 +1198,7 @@ CREATE TABLE IF NOT EXISTS `respostas_usuarios` (
   CONSTRAINT `fk_respostas_usuarios_usuarios1` FOREIGN KEY (`usuarios_idusuario`) REFERENCES `usuarios` (`idusuario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Copiando dados para a tabela quiz.respostas_usuarios: ~36 rows (aproximadamente)
-DELETE FROM `respostas_usuarios`;
+-- Copiando dados para a tabela quiz.respostas_usuarios: ~106 rows (aproximadamente)
 INSERT INTO `respostas_usuarios` (`usuarios_idusuario`, `pergunta_idpergunta`, `alternativas_idalternativas`, `datahora_resposta`) VALUES
 	(1, 1, 3, '2025-03-09 13:00:00'),
 	(1, 1, 3, '2025-03-09 13:00:00'),
@@ -1181,9 +1235,80 @@ INSERT INTO `respostas_usuarios` (`usuarios_idusuario`, `pergunta_idpergunta`, `
 	(5, 65, 260, '2025-05-11 23:01:56'),
 	(5, 79, 313, '2025-05-11 23:01:56'),
 	(5, 92, 368, '2025-05-11 23:01:56'),
-	(5, 101, 403, '2025-05-11 23:01:56');
+	(5, 101, 403, '2025-05-11 23:01:56'),
+	(6, 19, 74, '2025-05-13 02:29:31'),
+	(6, 25, 100, '2025-05-13 02:29:31'),
+	(6, 39, 153, '2025-05-13 02:29:31'),
+	(6, 41, 162, '2025-05-13 02:29:31'),
+	(6, 52, 206, '2025-05-13 02:29:31'),
+	(6, 60, 238, '2025-05-13 02:29:31'),
+	(6, 69, 273, '2025-05-13 02:29:31'),
+	(6, 70, 279, '2025-05-13 02:29:31'),
+	(6, 89, 353, '2025-05-13 02:29:31'),
+	(6, 91, 362, '2025-05-13 02:29:31'),
+	(7, 12, 47, '2025-05-13 13:13:47'),
+	(7, 13, 50, '2025-05-13 13:13:47'),
+	(7, 16, 63, '2025-05-13 13:13:47'),
+	(7, 19, 76, '2025-05-13 13:13:47'),
+	(7, 40, 157, '2025-05-13 13:13:47'),
+	(7, 43, 172, '2025-05-13 13:13:47'),
+	(7, 61, 241, '2025-05-13 13:13:47'),
+	(7, 52, 207, '2025-05-13 13:13:47'),
+	(7, 70, 277, '2025-05-13 13:13:47'),
+	(7, 90, 360, '2025-05-13 13:13:47'),
+	(9, 1, 2, '2025-05-17 20:54:00'),
+	(9, 2, 8, '2025-05-17 20:54:00'),
+	(9, 3, 12, '2025-05-17 20:54:00'),
+	(9, 15, 58, '2025-05-17 20:54:00'),
+	(9, 20, 78, '2025-05-17 20:54:00'),
+	(9, 33, 132, '2025-05-17 20:54:00'),
+	(9, 58, 230, '2025-05-17 20:54:00'),
+	(9, 62, 245, '2025-05-17 20:54:00'),
+	(9, 72, 286, '2025-05-17 20:54:00'),
+	(9, 103, 409, '2025-05-17 20:54:00'),
+	(9, 1, 2, '2025-05-17 20:56:16'),
+	(9, 2, 8, '2025-05-17 20:56:16'),
+	(9, 3, 12, '2025-05-17 20:56:16'),
+	(9, 15, 58, '2025-05-17 20:56:16'),
+	(9, 20, 78, '2025-05-17 20:56:16'),
+	(9, 33, 132, '2025-05-17 20:56:16'),
+	(9, 58, 230, '2025-05-17 20:56:16'),
+	(9, 62, 245, '2025-05-17 20:56:16'),
+	(9, 72, 286, '2025-05-17 20:56:16'),
+	(9, 103, 409, '2025-05-17 20:56:16'),
+	(9, 6, 24, '2025-05-17 21:33:54'),
+	(9, 9, 33, '2025-05-17 21:33:54'),
+	(9, 12, 47, '2025-05-17 21:33:54'),
+	(9, 15, 58, '2025-05-17 21:33:54'),
+	(9, 29, 115, '2025-05-17 21:33:54'),
+	(9, 37, 145, '2025-05-17 21:33:54'),
+	(9, 38, 150, '2025-05-17 21:33:54'),
+	(9, 58, 231, '2025-05-17 21:33:54'),
+	(9, 102, 406, '2025-05-17 21:33:54'),
+	(9, 104, 414, '2025-05-17 21:33:54'),
+	(10, 11, 42, '2025-05-22 03:05:09'),
+	(10, 26, 104, '2025-05-22 03:05:09'),
+	(10, 44, 174, '2025-05-22 03:05:09'),
+	(10, 53, 212, '2025-05-22 03:05:09'),
+	(10, 60, 237, '2025-05-22 03:05:09'),
+	(10, 67, 266, '2025-05-22 03:05:09'),
+	(10, 81, 323, '2025-05-22 03:05:09'),
+	(10, 85, 337, '2025-05-22 03:05:09'),
+	(10, 94, 374, '2025-05-22 03:05:09'),
+	(10, 101, 404, '2025-05-22 03:05:09'),
+	(11, 12, 47, '2025-05-22 03:12:02'),
+	(11, 19, 73, '2025-05-22 03:12:02'),
+	(11, 20, 77, '2025-05-22 03:12:02'),
+	(11, 47, 185, '2025-05-22 03:12:02'),
+	(11, 51, 201, '2025-05-22 03:12:02'),
+	(11, 53, 210, '2025-05-22 03:12:02'),
+	(11, 61, 244, '2025-05-22 03:12:02'),
+	(11, 82, 325, '2025-05-22 03:12:02'),
+	(11, 96, 381, '2025-05-22 03:12:02'),
+	(11, 98, 390, '2025-05-22 03:12:02');
 
 -- Copiando estrutura para tabela quiz.resposta_certa
+DROP TABLE IF EXISTS `resposta_certa`;
 CREATE TABLE IF NOT EXISTS `resposta_certa` (
   `pergunta_idpergunta` int(11) NOT NULL,
   `alternativas_idalternativas` int(11) NOT NULL,
@@ -1195,7 +1320,6 @@ CREATE TABLE IF NOT EXISTS `resposta_certa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
 -- Copiando dados para a tabela quiz.resposta_certa: ~104 rows (aproximadamente)
-DELETE FROM `resposta_certa`;
 INSERT INTO `resposta_certa` (`pergunta_idpergunta`, `alternativas_idalternativas`, `comentario`) VALUES
 	(1, 2, 'Riscos são inerentes a qualquer projeto e podem ser tanto ameaças quanto oportunidades. A gestão de riscos busca identificar, analisar e responder a esses eventos para minimizar impactos negativos e maximizar os positivos.'),
 	(2, 8, 'Ignorar os riscos é a pior abordagem possível. A gestão de riscos proativa é fundamental para o sucesso do projeto.'),
@@ -1303,6 +1427,7 @@ INSERT INTO `resposta_certa` (`pergunta_idpergunta`, `alternativas_idalternativa
 	(104, 413, 'Riscos na cadeia de suprimentos podem afetar a produção e entrega.');
 
 -- Copiando estrutura para tabela quiz.usuarios
+DROP TABLE IF EXISTS `usuarios`;
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `idusuario` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(100) NOT NULL,
@@ -1319,15 +1444,20 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   CONSTRAINT `area` FOREIGN KEY (`area`) REFERENCES `lista_valores` (`id_item`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `cargo` FOREIGN KEY (`cargo`) REFERENCES `lista_valores` (`id_item`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `setor` FOREIGN KEY (`setor`) REFERENCES `lista_valores` (`id_item`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb3 COLLATE=utf8mb3_general_ci;
 
--- Copiando dados para a tabela quiz.usuarios: ~4 rows (aproximadamente)
-DELETE FROM `usuarios`;
+-- Copiando dados para a tabela quiz.usuarios: ~10 rows (aproximadamente)
 INSERT INTO `usuarios` (`idusuario`, `nome`, `setor`, `area`, `cargo`, `email`, `telefone`, `datacriacao`) VALUES
 	(2, 'Teste', 36, 1, 28, '', '', '2025-05-11 22:15:54'),
 	(3, 'Teste 2', 34, 10, 31, '', '', '2025-05-11 22:19:31'),
 	(4, 'Teste 3', 35, 7, 27, '', '', '2025-05-11 22:51:22'),
-	(5, 'Teste 4', 34, 2, 25, '', '', '2025-05-11 23:01:37');
+	(5, 'Teste 4', 34, 2, 25, '', '', '2025-05-11 23:01:37'),
+	(6, 'Teste da vitória na luta.', 36, 7, 32, '', '', '2025-05-13 02:29:15'),
+	(7, 'Samuel', 36, 7, 28, '', '', '2025-05-13 13:13:34'),
+	(8, 'Teste 5', 36, 17, 25, '', '', '2025-05-14 12:12:54'),
+	(9, 'Marcos', 36, 1, 29, '', '', '2025-05-17 20:50:31'),
+	(10, 'Teste', 36, 3, 80, '', '', '2025-05-22 03:04:56'),
+	(11, 'Teste2', 36, 1, 83, '', '', '2025-05-22 03:11:49');
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
