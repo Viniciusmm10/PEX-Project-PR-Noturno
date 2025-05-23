@@ -8,8 +8,6 @@ Integrantes do grupo:
 
 RA: 251004001 - Diego Costa de Carvalho
 
-RA: 251004707 - Jonatas Ferreira da Silva Rocha 
-
 RA: 251004653 - Julio Antonio Bento Junior
 
 RA: 251004458 - Samuel Fernandes de Souza Magalhães
