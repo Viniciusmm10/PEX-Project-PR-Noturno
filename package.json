@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Samuel Fernandes, Diego Costa de Carvalho, Jonatas Ferreira da Silva Rocha, Julio Antonio Bento Junior, Vinicius Miguel Mariano da Silva, Vitor Vinicius Alves",
+  "author": "Samuel Fernandes, Diego Costa de Carvalho, Julio Antonio Bento Junior, Vinicius Miguel Mariano da Silva, Vitor Vinicius Alves",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.3",
