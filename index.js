@@ -145,6 +145,6 @@ app.get("/resultadoquiz", async (req, res) => {
 })
 
 
-app.listen(80, () => {console.log("App rodando!");});
+app.listen(8080, () => {console.log("App rodando!");});
 
 
